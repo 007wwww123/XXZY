@@ -13,6 +13,7 @@ from typing import Optional
 from ..config import (
     CACHE_DIR,
     DATA_DIR,
+    GEO_CACHE_DIR,
     GEO_DIR,
     HTML_OUTPUT_DIR,
     LOOKUP_DIR,
@@ -80,6 +81,16 @@ def get_cache_path(filename: str, subdir: Optional[str] = None) -> Path:
     """
     cache_dir = get_cache_dir(subdir)
     return cache_dir / filename
+
+
+def get_geo_cache_dir() -> Path:
+    """Get the geographic data cache directory."""
+    return ensure_dir(GEO_CACHE_DIR)
+
+
+def get_geo_cache_path(filename: str) -> Path:
+    """Get a cached geographic data file path."""
+    return get_geo_cache_dir() / filename
 
 
 def get_parquet_dir(processed: bool = False) -> Path:
