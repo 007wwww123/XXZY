@@ -11,8 +11,8 @@ config.py - 配置管理
 import os
 from pathlib import Path
 
-# 项目根目录（指向仓库中的 weather-map 目录）
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+# 项目根目录
+PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
 
 # 数据目录
 DATA_DIR = PROJECT_ROOT / "data"
