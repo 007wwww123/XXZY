@@ -12,14 +12,13 @@ import os
 from pathlib import Path
 
 # 项目根目录
-PROJECT_ROOT = Path(__file__).parent.parent.parent
+PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
 
 # 数据目录
 DATA_DIR = PROJECT_ROOT / "data"
 GEO_DIR = DATA_DIR / "geo"
 LOOKUP_DIR = DATA_DIR / "lookup"
 CACHE_DIR = DATA_DIR / "cache"
-GEO_CACHE_DIR = CACHE_DIR / "geo"
 PARQUET_DIR = DATA_DIR / "parquet"
 RAW_PARQUET_DIR = PARQUET_DIR / "raw"
 PROCESSED_PARQUET_DIR = PARQUET_DIR / "processed"
@@ -32,11 +31,6 @@ HTML_OUTPUT_DIR = OUTPUTS_DIR / "html"
 PROVINCE_GEOJSON = GEO_DIR / "china_province.geojson"
 NAME_MAP_JSON = GEO_DIR / "name_map.json"
 PROVINCES_CSV = LOOKUP_DIR / "provinces.csv"
-
-# 缓存文件
-CACHED_PROVINCE_GEOJSON = GEO_CACHE_DIR / "china_province.geojson"
-CACHED_NAME_MAP_JSON = GEO_CACHE_DIR / "name_map.json"
-CACHED_PROVINCES_CSV = GEO_CACHE_DIR / "provinces.csv"
 
 # 默认参数
 DEFAULT_SOURCE = "api"  # api 或 web
