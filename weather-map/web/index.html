@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>墨迹天气-全国降水/气温实时地图</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --color-primary: #2563eb;
+      --color-primary-dark: #1d4ed8;
+      --color-success: #16a34a;
+      --color-warning: #ca8a04;
+      --color-error: #dc2626;
+      --color-bg: #f1f5f9;
+      --color-surface: #ffffff;
+      --color-text: #1e293b;
+      --color-text-secondary: #64748b;
+      --color-border: #e2e8f0;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      overflow: hidden;
+    }
+
+    .app {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    /* Header */
+    .header {
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+
+    .metric-toggle {
+      display: flex;
+      background: var(--color-bg);
+      border-radius: var(--radius-md);
+      padding: 3px;
+    }
+
+    .metric-toggle button {
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      border: none;
+      background: transparent;
+      color: var(--color-text-secondary);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .metric-toggle button:hover {
+      color: var(--color-text);
+    }
+
+    .metric-toggle button.is-active {
+      background: var(--color-surface);
+      color: var(--color-primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .control-btn {
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      color: var(--color-text);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .control-btn:hover:not(:disabled) {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    .control-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .control-select {
+      padding: 6px 10px;
+      font-size: 13px;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      border-radius: var(--radius-sm);
+      color: var(--color-text);
+      cursor: pointer;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Message box */
+    .message-box {
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      padding: 10px 20px;
+      background: var(--color-surface);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      font-size: 13px;
+      border-left: 4px solid var(--color-border);
+      max-width: 90%;
+      text-align: center;
+      display: none;
+    }
+
+    .message-box[data-tone="ok"] {
+      border-left-color: var(--color-success);
+      color: var(--color-success);
+    }
+
+    .message-box[data-tone="warn"] {
+      border-left-color: var(--color-warning);
+      color: var(--color-warning);
+    }
+
+    .message-box[data-tone="error"] {
+      border-left-color: var(--color-error);
+      color: var(--color-error);
+    }
+
+    .message-box.visible {
+      display: block;
+    }
+
+    /* Status bar */
+    .status-bar {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      padding: 8px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .status-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .status-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .status-item span:first-child {
+      color: var(--color-text-secondary);
+    }
+
+    .status-item strong {
+      color: var(--color-text);
+      font-weight: 500;
+    }
+
+    .status-right {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    #statusText {
+      color: var(--color-text);
+    }
+
+    /* Loading overlay */
+    .loading-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+
+    body.is-loading .loading-overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid var(--color-border);
+      border-top-color: var(--color-primary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Tooltip styles */
+    .map-tooltip {
+      background: rgba(255,255,255,0.98);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      padding: 12px 16px;
+      min-width: 180px;
+      font-size: 13px;
+    }
+
+    .tooltip-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .tooltip-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0;
+    }
+
+    .tooltip-row span {
+      color: var(--color-text-secondary);
+    }
+
+    .tooltip-row strong {
+      color: var(--color-text);
+      font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header {
+        padding: 10px 12px;
+      }
+
+      .header-title {
+        font-size: 16px;
+      }
+
+      .metric-toggle button {
+        padding: 5px 12px;
+        font-size: 12px;
+      }
+
+      .status-bar {
+        padding: 6px 12px;
+      }
+
+      .status-left {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-left">
+        <h1 class="header-title">墨迹天气</h1>
+        <div class="metric-toggle">
+          <button data-metric="rain" class="is-active" aria-pressed="true">降水</button>
+          <button data-metric="temp" aria-pressed="false">气温</button>
+        </div>
+      </div>
+      <div class="header-right">
+        <select id="refreshInterval" class="control-select" title="自动刷新间隔">
+          <option value="0">不自动刷新</option>
+          <option value="5">每5分钟</option>
+          <option value="10" selected>每10分钟</option>
+          <option value="30">每30分钟</option>
+          <option value="60">每小时</option>
+        </select>
+        <button id="refreshButton" class="control-btn" title="刷新数据">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M23 4v6h-6M1 20v-6h6"/>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+          </svg>
+          刷新
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div id="map"></div>
+      <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+      </div>
+      <div id="message" class="message-box" hidden></div>
+    </main>
+
+    <footer class="status-bar">
+      <div class="status-left">
+        <div class="status-item">
+          <span>数据源</span>
+          <strong id="providerText">--</strong>
+        </div>
+        <div class="status-item">
+          <span>更新</span>
+          <strong id="updatedText">--</strong>
+        </div>
+        <div class="status-item">
+          <span>渲染</span>
+          <strong id="renderText">--</strong>
+        </div>
+        <div class="status-item">
+          <span>覆盖</span>
+          <strong id="coverageText">--</strong>
+        </div>
+        <div class="status-item">
+          <span>范围</span>
+          <strong id="extremeText">--</strong>
+        </div>
+        <div class="status-item">
+          <span>地图</span>
+          <strong id="geoText">--</strong>
+        </div>
+      </div>
+      <div class="status-right">
+        <span id="statusText">准备就绪</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Vendor: ECharts -->
+  <script src="vendor/echarts.min.js"></script>
+
+  <!-- Assets: GeoJSON & lookup tables -->
+  <script src="assets/china-provinces.js"></script>
+  <script src="assets/province-capitals.js"></script>
+
+  <!-- Config -->
+  <script src="js/config.js"></script>
+
+  <!-- Core modules -->
+  <script src="js/storage.js"></script>
+  <script src="js/openMeteoClient.js"></script>
+  <script src="js/weatherService.js"></script>
+  <script src="js/mapView.js"></script>
+
+  <!-- App -->
+  <script src="js/app.js"></script>
+</body>
+</html>
