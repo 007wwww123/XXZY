@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>中国15天动态天气预报</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+      background: linear-gradient(135deg, #0a1628 0%, #0d3b66 50%, #0a1628 100%);
+      min-height: 100vh;
+      color: #fff
+    }
+
+    .header {
+      background: linear-gradient(90deg, #ff6b00, #ff9500, #ff6b00);
+      padding: 14px 0;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(255, 102, 0, 0.3)
+    }
+
+    .header h1 {
+      font-size: 24px;
+      letter-spacing: 3px
+    }
+
+    .header .sub {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 13px;
+      letter-spacing: 1px
+    }
+
+    .main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 15px 20px
+    }
+
+    .tab-bar {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 10px
+    }
+
+    .tab-btn {
+      padding: 8px 32px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s
+    }
+
+    .tab-btn.active {
+      border-color: #ffd700;
+      background: rgba(255, 215, 0, 0.15);
+      color: #ffd700;
+      font-weight: bold
+    }
+
+    .info-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1)
+    }
+
+    .info-bar .time {
+      color: #ffd700;
+      font-size: 14px;
+      font-weight: bold
+    }
+
+    .info-bar .stats {
+      display: flex;
+      gap: 18px
+    }
+
+    .info-bar .stat {
+      text-align: center
+    }
+
+    .info-bar .stat .num {
+      font-size: 16px;
+      font-weight: bold
+    }
+
+    .info-bar .stat .label {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 11px
+    }
+
+    .stat-temp .num {
+      color: #ff6b6b
+    }
+
+    .stat-precip .num {
+      color: #4ecdc4
+    }
+
+    .map-wrapper {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3)
+    }
+
+    #map {
+      width: 100%;
+      height: 560px;
+      border-radius: 12px
+    }
+
+    .timeline-bar {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 12px 20px;
+      margin-top: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1)
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px
+    }
+
+    .timeline-header .day-info {
+      font-size: 14px;
+      font-weight: bold;
+      color: #ffd700
+    }
+
+    .controls {
+      display: flex;
+      gap: 8px;
+      align-items: center
+    }
+
+    .ctrl-btn {
+      width: 32px;
+      height: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      background: transparent;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s
+    }
+
+    .ctrl-btn:hover {
+      background: rgba(255, 215, 0, 0.2);
+      border-color: #ffd700
+    }
+
+    .ctrl-btn.playing {
+      background: rgba(255, 215, 0, 0.3);
+      border-color: #ffd700;
+      color: #ffd700
+    }
+
+    .speed-btn {
+      padding: 4px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 11px;
+      cursor: pointer
+    }
+
+    .speed-btn.active {
+      background: rgba(255, 215, 0, 0.2);
+      border-color: #ffd700;
+      color: #ffd700
+    }
+
+    .slider-wrap {
+      position: relative;
+      padding-top: 4px
+    }
+
+    input[type=range] {
+      width: 100%;
+      height: 4px;
+      -webkit-appearance: none;
+      background: linear-gradient(90deg, #4ecdc4, #ffd700, #ff6b6b);
+      border-radius: 2px;
+      outline: none
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #ffd700;
+      cursor: pointer;
+      border: 2px solid #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3)
+    }
+
+    .tick-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 4px;
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.4)
+    }
+
+    .legend-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 8px;
+      flex-wrap: wrap
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.7)
+    }
+
+    .legend-color {
+      width: 16px;
+      height: 12px;
+      border-radius: 2px;
+      border: 1px solid rgba(255, 255, 255, 0.2)
+    }
+
+    .footer {
+      text-align: center;
+      padding: 12px;
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 11px
+    }
+
+    @media(max-width:768px) {
+      #map {
+        height: 340px
+      }
+
+      .info-bar {
+        flex-direction: column;
+        gap: 6px
+      }
+
+      .info-bar .stats {
+        gap: 10px
+      }
+
+      .header h1 {
+        font-size: 18px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>中国15天动态天气预报</h1>
+    <div class="sub">中国天气网15天预报 ｜ 7天+8-15天</div>
+  </div>
+  <div class="main">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchMode('precip')">🌧 降水量</button>
+      <button class="tab-btn" onclick="switchMode('temp')">🌡 气温</button>
+    </div>
+    <div class="info-bar">
+      <div class="time" id="timeDisplay">加载中...</div>
+      <div class="stats">
+        <div class="stat stat-precip">
+          <div class="num" id="statPrecip">0.0</div>
+          <div class="label">平均降水(mm)</div>
+        </div>
+        <div class="stat stat-temp">
+          <div class="num" id="statTemp">0</div>
+          <div class="label">平均气温(°C)</div>
+        </div>
+        <div class="stat">
+          <div class="num" id="statRainCity">0</div>
+          <div class="label">降雨城市</div>
+        </div>
+      </div>
+    </div>
+    <div class="map-wrapper">
+      <div id="map"></div>
+    </div>
+    <div class="legend-row" id="legend"></div>
+    <div class="timeline-bar">
+      <div class="timeline-header">
+        <div class="day-info" id="dayInfo">第 1 天 / 共 15 天</div>
+        <div class="controls">
+          <button class="ctrl-btn" onclick="stepDay(-1)">◀</button>
+          <button class="ctrl-btn" id="playBtn" onclick="togglePlay()">▶</button>
+          <button class="ctrl-btn" onclick="stepDay(1)">▶</button>
+          <button class="speed-btn active" onclick="setSpeed(1000)">1x</button>
+          <button class="speed-btn" onclick="setSpeed(400)">3x</button>
+          <button class="speed-btn" onclick="setSpeed(200)">6x</button>
+        </div>
+      </div>
+      <div class="slider-wrap">
+        <input type="range" id="timeSlider" min="0" max="14" value="0" step="1"
+          oninput="onSliderChange(parseInt(this.value))">
+        <div class="tick-labels"><span id="sliderStart">第1天</span><span id="sliderMid">第8天</span><span
+            id="sliderEnd">第15天</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">数据来源：中国天气网15天预报 | <span id="year">2026</span></div>
+
+  <script>
+    // ============= 全局变量 ==============
+    var chart = null, chinaJson = null;
+    var allData = null;              // 原始JSON数据
+    var dateKeys = [];               // 日期列表 ['2026-06-08', ...]
+    var currentDayIdx = 0;           // 当前选中索引
+    var currentMode = 'precip';      // 'precip' 或 'temp'
+    var isPlaying = false;
+    var playTimer = null;
+    var playSpeed = 1000;
+
+    // ============= 初始化 ==============
+    function init() {
+      chart = echarts.init(document.getElementById('map'));
+      loadData();
+      window.addEventListener('resize', function () { chart && chart.resize(); });
+    }
+
+    function loadData() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'weather_15day_forecast.json', true);
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          allData = JSON.parse(xhr.responseText);
+          dateKeys = Object.keys(allData.data).sort();
+          document.getElementById('sliderEnd').textContent = '第' + dateKeys.length + '天';
+          document.getElementById('timeSlider').max = dateKeys.length - 1;
+          loadChinaMap();
+        } else {
+          document.getElementById('timeDisplay').textContent = '数据加载失败 (HTTP ' + xhr.status + ')';
+        }
+      };
+      xhr.onerror = function () {
+        document.getElementById('timeDisplay').textContent = '网络错误，请通过HTTP服务器访问';
+      };
+      xhr.send();
+    }
+
+    function loadChinaMap() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json', true);
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          chinaJson = JSON.parse(xhr.responseText);
+          echarts.registerMap('china', chinaJson);
+          renderMap();
+          updateUI();
+        } else {
+          document.getElementById('map').innerHTML = '<div style="color:#fff;text-align:center;padding:80px"><h2>地图加载失败</h2></div>';
+        }
+      };
+      xhr.onerror = function () {
+        document.getElementById('map').innerHTML = '<div style="color:#fff;text-align:center;padding:80px"><h2>网络失败</h2></div>';
+      };
+      xhr.send();
+    }
+
+    // ============= 地图渲染 ==============
+    function renderMap() {
+      if (!chart || !chinaJson || !allData) return;
+
+      var dateStr = dateKeys[currentDayIdx];
+      var dayData = allData.data[dateStr];
+      if (!dayData) return;
+
+      var mapData = [];
+      var totalPrecip = 0, totalTemp = 0, rainCount = 0, cityCount = 0;
+
+      // 过滤南海诸岛区域（名称包含"南海"的区域）
+      var southSeaNames = ['南海诸岛', '南海'];
+
+      for (var i = 0; i < chinaJson.features.length; i++) {
+        var provName = chinaJson.features[i].properties.name;
+        
+        // 跳过南海诸岛区域
+        if (southSeaNames.indexOf(provName) !== -1) {
+          continue;
+        }
+        
+        var d = dayData[provName];
+        if (d) {
+          var val = currentMode === 'temp' ? Math.round((d.temp_max + d.temp_min) / 2) : d.precip;
+          mapData.push({ name: provName, value: val });
+          totalPrecip += d.precip;
+          totalTemp += (d.temp_max + d.temp_min) / 2;
+          cityCount++;
+          if (d.precip > 0) rainCount++;
+        } else {
+          mapData.push({ name: provName, value: currentMode === 'temp' ? 20 : 0 });
+        }
+      }
+
+      document.getElementById('statPrecip').textContent = cityCount > 0 ? (totalPrecip / cityCount).toFixed(1) : '0.0';
+      document.getElementById('statTemp').textContent = cityCount > 0 ? Math.round(totalTemp / cityCount) : '0';
+      document.getElementById('statRainCity').textContent = rainCount + '/' + cityCount;
+
+      var isTemp = currentMode === 'temp';
+
+      var option = {
+        tooltip: {
+          trigger: 'item',
+          backgroundColor: 'rgba(0,0,0,0.85)',
+          borderColor: isTemp ? '#ff6b6b' : '#4ecdc4',
+          borderWidth: 1,
+          padding: [10, 14],
+          textStyle: { color: '#fff', fontSize: 13 },
+          formatter: function (p) {
+            var d = dayData[p.name];
+            if (!d) return p.name + '<br/>' + (isTemp ? '气温' : '降水') + '：' + p.value;
+            return '<div style="font-weight:bold;color:' + (isTemp ? '#ff6b6b' : '#4ecdc4') + ';font-size:15px;margin-bottom:4px">' + d.city + ' - ' + p.name + '</div>' +
+              (isTemp ? '<div>平均气温：<b>' + p.value + '°C</b> (最高' + d.temp_max + '°C / 最低' + d.temp_min + '°C)</div>' : '<div>降水量：<b>' + p.value + ' mm</b></div>');
+          }
+        },
+        visualMap: {
+          min: isTemp ? 5 : 0,
+          max: isTemp ? 35 : 40,
+          text: [isTemp ? '高温' : '多雨', isTemp ? '低温' : '无雨'],
+          textStyle: { color: '#fff' },
+          inRange: {
+            color: isTemp ?
+              ['rgba(64,64,255,0.6)', 'rgba(65,105,225,0.55)', 'rgba(135,206,250,0.5)', 'rgba(144,238,144,0.5)', 'rgba(255,215,0,0.5)', 'rgba(255,140,0,0.55)', 'rgba(255,69,0,0.65)'] :
+              ['rgba(200,200,200,0.08)', 'rgba(200,230,255,0.3)', 'rgba(135,206,250,0.5)', 'rgba(65,105,225,0.6)', 'rgba(138,43,226,0.7)', 'rgba(255,0,0,0.75)']
+          },
+          calculable: true,
+          left: 'left', bottom: '40px',
+          itemWidth: 12, itemHeight: 120
+        },
+        series: [{
+          type: 'map', 
+          map: 'china', 
+          roam: 'scale',  // 仅允许缩放，禁止拖拽
+          scaleLimit: {  // 设置缩放比例上下限
+            min: 1.2,
+            max: 4
+          },
+          label: { 
+            show: false  // 默认不显示标签
+          },
+          emphasis: { 
+            label: { 
+              show: true,
+              color: '#000000',  // 黑色字体
+              fontSize: 13, 
+              fontWeight: 'bold'  // 加粗
+            }, 
+            itemStyle: { 
+              areaColor: 'rgba(255,215,0,0.15)', 
+              borderColor: '#333333', 
+              borderWidth: 3 
+            } 
+          },
+          itemStyle: { 
+            borderColor: 'rgba(255,255,255,0.5)', 
+            borderWidth: 2,  // 加粗边界
+            areaColor: 'rgba(200,200,200,0.08)' 
+          },
+          data: mapData, 
+          z: 2,
+          zoom: 1.2  // 设置初始缩放级别
+        }]
+      };
+
+      chart.setOption(option);
+      updateLegend();
+    }
+
+    // ============= UI控制 ==============
+    function updateUI() {
+      if (!allData) return;
+      var dateStr = dateKeys[currentDayIdx];
+      var d = new Date(dateStr);
+      var dayName = ['日', '一', '二', '三', '四', '五', '六'][d.getDay()];
+      document.getElementById('dayInfo').textContent = '第' + (currentDayIdx + 1) + '天 - ' + dateStr + ' 周' + dayName;
+      document.getElementById('timeDisplay').textContent = dateStr + ' 周' + dayName;
+      document.getElementById('timeSlider').value = currentDayIdx;
+      document.getElementById('sliderStart').textContent = dateKeys[0];
+      document.getElementById('sliderMid').textContent = dateKeys[Math.floor(dateKeys.length / 2)];
+      document.getElementById('sliderEnd').textContent = dateKeys[dateKeys.length - 1];
+    }
+
+    function onSliderChange(val) {
+      currentDayIdx = val;
+      if (chart && chinaJson) renderMap();
+      updateUI();
+    }
+
+    function stepDay(dir) {
+      currentDayIdx = (currentDayIdx + dir + dateKeys.length) % dateKeys.length;
+      document.getElementById('timeSlider').value = currentDayIdx;
+      if (chart && chinaJson) renderMap();
+      updateUI();
+    }
+
+    function togglePlay() {
+      isPlaying = !isPlaying;
+      document.getElementById('playBtn').textContent = isPlaying ? '⏸' : '▶';
+      document.getElementById('playBtn').className = 'ctrl-btn' + (isPlaying ? ' playing' : '');
+      if (isPlaying) {
+        playTimer = setInterval(function () { stepDay(1); }, playSpeed);
+      } else {
+        clearInterval(playTimer);
+      }
+    }
+
+    function setSpeed(ms) {
+      playSpeed = ms;
+      document.querySelectorAll('.speed-btn').forEach(function (b) { b.className = 'speed-btn'; });
+      event.target.className = 'speed-btn active';
+      if (isPlaying) {
+        clearInterval(playTimer);
+        playTimer = setInterval(function () { stepDay(1); }, playSpeed);
+      }
+    }
+
+    function switchMode(mode) {
+      currentMode = mode;
+      document.querySelectorAll('.tab-btn').forEach(function (b) { b.className = 'tab-btn'; });
+      event.target.className = 'tab-btn active';
+      if (chart && chinaJson) renderMap();
+    }
+
+    function updateLegend() {
+      var legend = document.getElementById('legend');
+      if (currentMode === 'temp') {
+        legend.innerHTML = [
+          { c: 'rgba(64,64,255,0.6)', l: '<5°C' }, { c: 'rgba(135,206,250,0.5)', l: '5-15°C' },
+          { c: 'rgba(144,238,144,0.5)', l: '15-20°C' }, { c: 'rgba(255,215,0,0.5)', l: '20-25°C' },
+          { c: 'rgba(255,140,0,0.55)', l: '25-30°C' }, { c: 'rgba(255,69,0,0.65)', l: '>30°C' }
+        ].map(function (x) { return '<div class="legend-item"><div class="legend-color" style="background:' + x.c + '"></div>' + x.l + '</div>'; }).join('');
+      } else {
+        legend.innerHTML = [
+          { c: 'rgba(200,200,200,0.08)', l: '无雨' }, { c: 'rgba(200,230,255,0.3)', l: '0-5mm' },
+          { c: 'rgba(135,206,250,0.5)', l: '5-15mm' }, { c: 'rgba(65,105,225,0.6)', l: '15-25mm' },
+          { c: 'rgba(138,43,226,0.7)', l: '25-35mm' }, { c: 'rgba(255,0,0,0.75)', l: '>35mm' }
+        ].map(function (x) { return '<div class="legend-item"><div class="legend-color" style="background:' + x.c + '"></div>' + x.l + '</div>'; }).join('');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById('sliderStart').textContent = '第1天';
+      document.getElementById('sliderMid').textContent = '第8天';
+      document.getElementById('sliderEnd').textContent = '第15天';
+      init();
+    });
+  </script>
+</body>
+
+</html>

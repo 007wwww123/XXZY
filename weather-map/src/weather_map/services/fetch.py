@@ -15,6 +15,7 @@ from typing import Optional
 import pandas as pd
 
 from ..adapters.open_meteo_api import OpenMeteoAdapter
+from ..adapters.weather_web import WeatherWebAdapter
 from ..config import PROVINCES_CSV, CACHE_DIR
 
 PROVINCE_COLUMNS = (
@@ -48,6 +49,10 @@ def fetch_weather_data(source: str, **kwargs) -> pd.DataFrame:
 
     if source == "api":
         return OpenMeteoAdapter().fetch_data(**kwargs)
+    elif source == "web":
+        return WeatherWebAdapter().fetch_data(**kwargs)
+    elif source == "web15d":
+        return WeatherWebAdapter().fetch_15day_forecast(**kwargs)
 
     raise NotImplementedError(f"Unsupported source: {source}")
 
