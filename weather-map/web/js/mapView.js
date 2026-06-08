@@ -145,8 +145,8 @@
               },
             },
             itemStyle: {
-              borderColor: "#ffffff",
-              borderWidth: 0.8,
+              borderColor: "#94a3b8",
+              borderWidth: 2,
               areaColor: "#d8dee6",
             },
           },
