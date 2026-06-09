@@ -1,72 +1,256 @@
-# weather-map
+# 全国降水/气温实时地图
 
-一个适合新手的“省级天气数据管道 + 交互式分层设色图（HTML）导出”项目：以**省会城市作为该省代表点**抓取天气数据（温度/降水等），统一清洗为 **Parquet**，并生成可离线打开的**省级分层设色地图**。
+基于 ECharts 与 Open-Meteo API 开发的轻量级气象可视化应用，支持全国省级行政区实时降水与气温数据的展示。
 
-项目支持两种数据接入方式：
-- **API 接入（推荐）**：通过公开天气 API 获取数据（如 Open-Meteo）。
-- **网页爬取（学习用途）**：抓取并解析天气网页，将结果归一到同一套数据结构（便于对比与扩展）。
+## 功能特性
 
-## 项目结构
+### 功能一：实时气象数据地图
+- **实时气象数据**：集成 Open-Meteo API，获取全国省会城市当前气温、降水观测值
+- **双模式切换**：一键切换降水/气温视图，自动更新地图填充色与色阶图例
+- **交互工具**：支持缩放、平移，Tooltip 展示详细气象数据
+- **数据缓存**：LocalStorage 缓存机制，减少重复 API 请求
+- **自动刷新**：可配置自动刷新间隔（5分钟/10分钟/30分钟/1小时）
+- **响应式设计**：适配桌面端与移动端
 
-- `data/geo/`：地图边界与省名对齐相关文件  
-  - `china_province.geojson`：中国省级边界 GeoJSON  
-  - `name_map.json`：省名映射表（GeoJSON 省名 ↔ 项目内部省名）
-- `data/lookup/`：静态查表数据（全项目“唯一真源”）  
-  - `provinces.csv`：省级单位 + 省会 + 经纬度
-- `data/cache/`：抓取缓存（API JSON / 网页 HTML），减少重复请求
-- `data/parquet/raw/`：归一化后的原始天气记录（统一 schema，API/网页共用）
-- `data/parquet/processed/`：聚合后的省级数据（用于地图展示）
-- `outputs/html/`：生成的交互式地图 HTML（离线打开即可）
-- `src/weather_map/`：项目代码（CLI + adapters + services + viz）
-- `tests/`：单元测试（建议至少保留聚合逻辑测试）
+### 功能二：15天动态天气预报
+- **网页爬取数据**：集成中国天气网爬虫，获取15天逐日天气预报数据
+- **动态时间轴**：支持播放/暂停、快进/快退、速度调节等交互控制
+- **双模式展示**：降水量与气温两种可视化模式
+- **统计信息**：实时显示平均降水、平均气温、降雨城市数量
+- **数据来源**：中国天气网15天预报（7天+8-15天）
 
-## 数据流程（核心步骤）
+## 目录结构
 
-1. **抓取（Fetch）**：按 `provinces.csv` 中的省会经纬度抓取天气数据（API 或网页）。
-2. **归一化（Normalize）**：将不同来源的数据整理成统一结构，写入 `data/parquet/raw/`。
-3. **清洗与聚合（Transform & Aggregate）**：计算省级展示值  
-   - 示例：当日最高温 / 当日降水总量 / 某时刻温度等
-4. **省名对齐（Map Join）**：用 `name_map.json` 将省名统一到 GeoJSON 的命名体系，避免地图无法匹配。
-5. **可视化导出（Render）**：生成交互式分层设色地图，输出到 `outputs/html/`。
+```
+weather-map/
+├── web/                          # 前端资源目录
+│   ├── index.html                # 功能一：实时气象地图入口
+│   ├── forecast.html             # 功能二：15天动态预报入口
+│   ├── weather_15day_forecast.json  # 15天预报数据（爬虫生成）
+│   ├── assets/
+│   │   ├── china-provinces.js    # 中国省级行政区 GeoJSON（34个省级要素）
+│   │   └── province-capitals.js   # 省会城市坐标与名称映射表
+│   ├── js/
+│   │   ├── app.js                # 应用主逻辑
+│   │   ├── config.js             # 色阶图例与 API 配置
+│   │   ├── mapView.js            # ECharts 地图渲染模块
+│   │   ├── openMeteoClient.js    # Open-Meteo API 请求封装
+│   │   ├── storage.js            # LocalStorage 缓存管理
+│   │   └── weatherService.js     # 气象数据服务层
+│   └── vendor/
+│       └── echarts.min.js        # ECharts 库
+├── data/
+│   ├── cache/                    # 运行时缓存目录
+│   │   └── geo/
+│   ├── geo/                      # 地理数据
+│   │   ├── china_province.geojson
+│   │   └── name_map.json
+│   └── lookup/                   # 查询数据
+│       └── provinces.csv
+├── src/                          # Python 后端源码
+│   └── weather_map/
+│       ├── adapters/             # API 适配器
+│       │   ├── base.py           # 适配器基类
+│       │   ├── open_meteo_api.py # Open-Meteo API 适配器
+│       │   └── weather_web.py    # 中国天气网爬虫适配器
+│       ├── services/             # 数据处理服务
+│       │   ├── fetch.py          # 数据抓取服务（支持API/Web两种源）
+│       │   ├── transform.py      # 数据转换
+│       │   ├── map_join.py       # 地图数据关联
+│       │   └── export.py         # 数据导出
+│       ├── utils/                # 工具函数
+│       ├── viz/                  # 可视化模块
+│       └── cli.py                # 命令行接口
+├── tests/                        # 测试用例
+├── .github/workflows/            # GitHub Actions 自动部署
+├── requirements.txt              # Python 依赖
+└── README.md                     # 项目文档
 
-## 运行环境与依赖
-
-- 建议 Python 3.10+
-- 依赖见 `requirements.txt`（通常包含：`requests`、`pandas`、`pyarrow`、`pyecharts` 等）
+```
 
 ## 快速开始
 
+### 功能一：实时气象地图（纯前端，无需安装依赖）
+
+直接用浏览器打开 `web/index.html` 文件即可运行：
+
 ```bash
+# Windows
+start weather-map/web/index.html
+
+# macOS
+open weather-map/web/index.html
+
+# Linux
+xdg-open weather-map/web/index.html
+```
+
+> 注意：由于浏览器安全策略，直接打开本地文件时 AJAX 请求可能受限。建议使用本地服务器：
+> ```bash
+> cd weather-map/web
+> python -m http.server 8080
+> # 然后访问 http://localhost:8080
+> ```
+
+### 功能二：15天动态预报
+
+```bash
+cd weather-map/web
+python -m http.server 8080
+# 访问 http://localhost:8080/forecast.html
+```
+
+### Python 后端服务
+
+```bash
+# 安装依赖
 pip install -r requirements.txt
-python -m weather_map.cli --source api --metric temperature --date 2026-06-03
+
+# 启动后端服务
+cd src
+python -m weather_map.cli serve
+
+# 访问 http://localhost:5000
 ```
 
-该命令通常会：
-- 拉取天气数据（API 模式），
-- 在 `data/parquet/` 下生成 raw/processed 的 Parquet 文件，
-- 并在 `outputs/html/` 生成交互式地图 HTML。
+## 数据获取方式
 
-## 常用命令参数（建议）
+### 方式一：API 数据获取（Open-Meteo）
 
-- `--source`：数据来源，`api` 或 `web`
-- `--metric`：指标类型，`temperature`（温度）或 `precipitation`（降水）
-- `--date`：日期，格式 `YYYY-MM-DD`（例如 `2026-06-03`）
+```python
+from weather_map.services.fetch import fetch_weather_data
 
-示例（网页爬取 + 降水）：
+# 获取实时天气数据
+df = fetch_weather_data(source='api', latitude=39.9, longitude=116.4)
+```
+
+### 方式二：网页爬取（中国天气网）
+
+```python
+from weather_map.services.fetch import fetch_weather_data
+
+# 获取当日天气数据（网页爬取）
+df = fetch_weather_data(source='web')
+
+# 获取15天预报数据（网页爬取）
+df = fetch_weather_data(source='web15d')
+```
+
+## 数据说明
+
+### 气象数据
+
+#### 实时数据（Open-Meteo API）
+- **数据源**：Open-Meteo API (https://api.open-meteo.com/v1/forecast)
+- **请求变量**：`temperature_2m`（2米气温）、`precipitation`（总降水量）、`rain`（降雨量）
+- **时区**：Asia/Shanghai
+- **数据精度**：以省会城市观测站数据代表所在省级行政区
+
+#### 预报数据（中国天气网爬取）
+- **数据源**：中国天气网 (https://www.weather.com.cn)
+- **数据范围**：全国31个省会城市（港澳台除外）
+- **预报时长**：15天（7天预报 + 8-15天预报）
+- **数据字段**：最高温、最低温、降水量估算
+- **更新频率**：建议每日更新
+
+### 色阶图例
+
+#### 降水分级（mm/h）
+
+| 等级 | 范围 | 颜色 |
+|------|------|------|
+| 暴雨 | ≥16 | #5b1a8e |
+| 大雨 | 8-15.9 | #1f5fbf |
+| 中雨 | 2.5-7.9 | #2f9bff |
+| 小雨 | 0.1-2.4 | #a8d8ff |
+| 无降水 | 0-0.09 | #edf3f7 |
+
+#### 气温分级（°C）
+
+| 等级 | 范围 | 颜色 |
+|------|------|------|
+| 高温 | ≥35 | #8c1d18 |
+| 炎热 | 30-34.9 | #d9482b |
+| 温暖 | 20-29.9 | #f2a43a |
+| 舒适 | 10-19.9 | #f6df72 |
+| 偏冷 | 0-9.9 | #7bc8a4 |
+| 寒冷 | -10--0.1 | #44a7d8 |
+| 严寒 | -20--10.1 | #276fbf |
+| 极寒 | <-20 | #1f3b88 |
+
+### 地理底图
+
+- **GeoJSON 来源**：中国省级行政区划标准地图
+- **要素数量**：34个省级行政区（不含南海诸岛等争议区域）
+- **匹配字段**：`fullname`（如"北京市"、"广东省"）
+
+## API 缓存机制
+
+- **缓存 TTL**：10 分钟
+- **存储位置**：浏览器 LocalStorage
+- **缓存 Key**：
+  - `mojiLite.dataset.rain` / `mojiLite.dataset.temp` - 数据集缓存
+  - `mojiLite.raw.rain` / `mojiLite.raw.temp` - 原始 API 响应缓存
+
+## 性能指标
+
+| 指标 | 目标 |
+|------|------|
+| 页面加载时间 | <3秒 |
+| 地图渲染响应 | <500ms |
+| API 超时 | 12秒 |
+
+## 浏览器兼容性
+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+## 部署说明
+
+### 前端静态部署
+
+将 `web/` 目录部署到任意静态服务器即可：
 
 ```bash
-python -m weather_map.cli --source web --metric precipitation --date 2026-06-03
+# Nginx
+location / {
+    root /path/to/weather-map/web;
+    index index.html;
+}
+
+# Apache
+DocumentRoot "/path/to/weather-map/web"
 ```
 
-## 说明与限制
+### GitHub Pages 自动部署
 
-- 省级数据使用**省会代表点**近似全省情况，属于简化建模；若需要更准确，可改为“多个城市取均值/加权”。
-- 网页爬取模式用于学习演示，网页结构可能变动，需要维护解析规则；抓取时请控制频率并遵守网站条款。
-- 若地图出现某些省为空白，优先检查：`name_map.json` 是否覆盖了所有省名差异。
+项目已配置 GitHub Actions 工作流 (`.github/workflows/deploy.yml`)，推送代码后自动部署到 GitHub Pages。
 
-## 后续可扩展方向（可选）
+### 注意事项
 
-- 增加更多指标：风速、湿度、体感温度、空气质量等
-- 增加缓存策略：TTL、增量更新、失败重试
-- 增加更多地图层级：市级/区县级（在省级稳定后再做）
-- 输出更多图表：时间序列折线、极值统计、对比排行等
+1. **跨域问题**：Open-Meteo API 支持 CORS，可直接从前端调用
+2. **HTTPS**：生产环境建议使用 HTTPS 以获得更好的浏览器体验
+3. **Service Worker**：如需离线支持，可自行添加 PWA 能力
+4. **爬虫频率**：使用网页爬取功能时，请合理控制请求频率，避免对目标网站造成压力
+
+## 开源许可
+
+MIT License
+
+## 更新日志
+
+### v1.1.0 (2026-06-08)
+- 新增15天动态天气预报功能
+- 集成中国天气网网页爬虫适配器
+- 新增动态时间轴交互控制
+- 支持降水量与气温双模式动态展示
+- 新增 forecast.html 预报可视化页面
+
+### v1.0.0 (2026-06-06)
+- 初始版本发布
+- 支持降水/气温双模式切换
+- 集成 Open-Meteo 实时气象 API
+- 34个省级行政区 GeoJSON 底图
+- 响应式设计与 Tooltip 交互
