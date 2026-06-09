@@ -1,104 +1,3 @@
-
-## 二、完整项目树结构
-
-基于当前仓库实际文件（共 47 个文件）：
-
-```
-XXZY/
-├── .gitignore                          # Git 忽略规则
-├── README.md                           # 项目主文档（保留）
-├── .idea/                              # PyCharm IDE 配置（本地开发用）
-│   ├── .gitignore
-│   ├── XXZY.iml
-│   ├── misc.xml
-│   ├── modules.xml
-│   ├── vcs.xml
-│   └── inspectionProfiles/
-│       └── profiles_settings.xml
-└── weather-map/                        # 核心子项目：全国气象可视化
-    ├── requirements.txt                # Python 依赖
-    ├── .github/
-    │   └── workflows/
-    │       └── deploy.yml              # GitHub Pages 自动部署
-    ├── data/                           # 数据目录
-    │   ├── geo/                        # 地理基准数据
-    │   │   └── name_map.json           # 省名映射表（简称 ↔ 全称）
-    │   ├── lookup/                     # 静态查表（唯一真源）
-    │   │   └── provinces.csv           # 34 个省级单位 + 省会 + 经纬度
-    │   └── cache/                      # 运行时地理数据缓存
-    │       └── geo/
-    │           ├── name_map.json
-    │           └── provinces.csv
-    ├── src/                            # Python 后端源码
-    │   └── weather_map/
-    │       ├── __init__.py
-    │       ├── cli.py                  # CLI 入口（待实现）
-    │       ├── config.py               # 路径与默认参数配置
-    │       ├── adapters/               # 数据源适配器
-    │       │   ├── __init__.py
-    │       │   ├── base.py             # WeatherProvider 抽象基类
-    │       │   ├── open_meteo_api.py   # Open-Meteo API 适配器 ✅
-    │       │   └── weather_web.py      # 中国天气网爬虫适配器 ✅
-    │       ├── services/               # 数据处理服务
-    │       │   ├── __init__.py
-    │       │   ├── fetch.py            # 数据抓取（API/Web/15天）✅
-    │       │   ├── map_join.py         # 省名对齐与 GeoJSON 关联 ✅
-    │       │   ├── transform.py        # 数据清洗聚合（待实现）
-    │       │   └── export.py           # Parquet 导出（待实现）
-    │       ├── utils/                  # 工具模块
-    │       │   ├── __init__.py
-    │       │   ├── geo_cache.py        # 地理数据缓存加载 ✅
-    │       │   ├── http.py
-    │       │   ├── logging.py
-    │       │   └── paths.py
-    │       └── viz/                    # 可视化模块
-    │           ├── __init__.py
-    │           └── choropleth.py       # pyecharts 分层设色图（待实现）
-    ├── tests/                          # 单元测试
-    │   ├── __init__.py
-    │   ├── test_geo_cache.py
-    │   ├── test_map_join.py
-    │   └── test_transform.py
-    └── web/                            # 前端静态资源
-        ├── index.html                  # 功能一：实时降水/气温地图
-        ├── forecast.html               # 功能二：15 天动态预报
-        ├── weather_15day_forecast.json # 15 天预报数据（爬虫生成）
-        └── js/
-            ├── app.js                  # 实时地图主逻辑
-            ├── config.js               # API 配置与色阶图例
-            ├── mapView.js              # ECharts 地图渲染
-            ├── openMeteoClient.js      # Open-Meteo 请求封装
-            ├── storage.js              # LocalStorage 缓存
-            └── weatherService.js       # 气象数据服务层
-```
-
-**文档提及但仓库中缺失的文件**（需在 README 中说明）：
-
-- `data/geo/china_province.geojson` — 省级边界 GeoJSON
-- `web/assets/china-provinces.js` — 前端地图底图
-- `web/assets/province-capitals.js` — 省会坐标表
-- `web/vendor/echarts.min.js` — ECharts 本地库（`forecast.html` 使用 CDN 替代）
-- `data/parquet/`、`outputs/html/` — 规划中的数据管道输出目录
-
----
-
-## 三、两版 README 差异与合并要点
-
-| 维度 | 根目录 README | weather-map/README（待删） |
-|------|---------------|---------------------------|
-| 侧重点 | Python 数据管道（Parquet + pyecharts 导出） | Web 前端可视化（实时地图 + 15 天预报） |
-| 准确度 | CLI 命令可用，但 `cli.py` 实际为空实现 | 前端功能描述更贴近现状 |
-| 缺失内容 | 无前端使用说明、色阶、部署 | 无 Python 管道规划说明 |
-
-优化后的根 README 应：**以 Web 前端为主（已可用），Python 后端为辅（部分已实现）**，并如实标注开发进度。
-
----
-
-## 四、优化后的 README.md 完整草案
-
-以下内容可直接替换 `C:\Users\007\PycharmProjects\XXZY\README.md`：
-
-```markdown
 # XXZY · 全国气象可视化项目
 
 基于 ECharts 与 Open-Meteo API 的轻量级全国省级气象可视化应用，同时提供 Python 数据处理管道，用于抓取、清洗、聚合省级天气数据并导出交互式地图。
@@ -122,6 +21,14 @@ XXZY/
 - **动态时间轴**：支持播放 / 暂停、快进 / 快退、速度调节
 - **双模式展示**：降水量与气温两种可视化模式
 - **统计面板**：实时显示平均降水、平均气温、降雨城市数量
+
+#### 15 天预报地图优化特性（v1.1.1）
+
+- **南海诸岛处理**：地图不包含南海诸岛区域标注（无相关天气数据）
+- **地图交互优化**：固定地图位置，禁止拖拽，保持页面布局稳定
+- **缩放控制**：设置缩放比例上下限（1.2x - 4x），防止无限缩放
+- **省份名称显示**：鼠标悬停时以黑色加粗字体展示省份名称
+- **边界样式**：地图边界加粗处理，与实时气象地图风格一致
 
 ### 功能三：Python 数据处理管道（后端，部分实现）
 
@@ -400,6 +307,16 @@ MIT License
 ---
 
 ## 更新日志
+
+### v1.1.1（2026-06-09）
+
+- **15 天预报地图优化**：
+  - 移除南海诸岛区域标注（无天气数据）
+  - 固定地图位置，禁止拖拽
+  - 设置缩放比例上下限（1.2x - 4x）
+  - 鼠标悬停显示黑色加粗省份名称
+  - 地图边界加粗处理
+- **项目结构优化**：删除冗余的 weather-map/README.md，统一文档管理
 
 ### v1.1.0（2026-06-08）
 
