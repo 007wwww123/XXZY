@@ -1,2828 +1,3098 @@
 {
- "generated_at": "2026-06-08 19:04:54",
- "total_cities": 31,
- "total_days": 15,
- "total_records": 465,
- "data": {
-  "2026-06-08": {
-   "北京市": {
-    "city": "北京",
-    "temp_max": 26,
-    "temp_min": 16,
-    "precip": 0.1
-   },
-   "天津市": {
-    "city": "天津",
-    "temp_max": 28,
-    "temp_min": 18,
-    "precip": 3.4
-   },
-   "河北省": {
-    "city": "石家庄",
-    "temp_max": 24,
-    "temp_min": 14,
-    "precip": 0.0
-   },
-   "山西省": {
-    "city": "太原",
-    "temp_max": 22,
-    "temp_min": 12,
-    "precip": 0.0
-   },
-   "内蒙古自治区": {
-    "city": "呼和浩特",
-    "temp_max": 18,
-    "temp_min": 8,
-    "precip": 0.0
-   },
-   "辽宁省": {
-    "city": "沈阳",
-    "temp_max": 23,
-    "temp_min": 13,
-    "precip": 0.0
-   },
-   "吉林省": {
-    "city": "长春",
-    "temp_max": 21,
-    "temp_min": 11,
-    "precip": 0.0
-   },
-   "黑龙江省": {
-    "city": "哈尔滨",
-    "temp_max": 20,
-    "temp_min": 10,
-    "precip": 0.0
-   },
-   "上海市": {
-    "city": "上海",
-    "temp_max": 31,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "江苏省": {
-    "city": "南京",
-    "temp_max": 30,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "浙江省": {
-    "city": "杭州",
-    "temp_max": 29,
-    "temp_min": 19,
-    "precip": 4.8
-   },
-   "安徽省": {
-    "city": "合肥",
-    "temp_max": 28,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "福建省": {
-    "city": "福州",
-    "temp_max": 31,
-    "temp_min": 21,
-    "precip": 4.5
-   },
-   "江西省": {
-    "city": "南昌",
-    "temp_max": 30,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "山东省": {
-    "city": "济南",
-    "temp_max": 31,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "河南省": {
-    "city": "郑州",
-    "temp_max": 29,
-    "temp_min": 19,
-    "precip": 0.0
-   },
-   "湖北省": {
-    "city": "武汉",
-    "temp_max": 27,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "湖南省": {
-    "city": "长沙",
-    "temp_max": 28,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "广东省": {
-    "city": "广州",
-    "temp_max": 33,
-    "temp_min": 23,
-    "precip": 18.3
-   },
-   "广西壮族自治区": {
-    "city": "南宁",
-    "temp_max": 31,
-    "temp_min": 21,
-    "precip": 1.1
-   },
-   "海南省": {
-    "city": "海口",
-    "temp_max": 36,
-    "temp_min": 26,
-    "precip": 0.0
-   },
-   "重庆市": {
-    "city": "重庆",
-    "temp_max": 27,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "四川省": {
-    "city": "成都",
-    "temp_max": 26,
-    "temp_min": 16,
-    "precip": 0.0
-   },
-   "贵州省": {
-    "city": "贵阳",
-    "temp_max": 24,
-    "temp_min": 14,
-    "precip": 0.0
-   },
-   "云南省": {
-    "city": "昆明",
-    "temp_max": 24,
-    "temp_min": 14,
-    "precip": 4.8
-   },
-   "西藏自治区": {
-    "city": "拉萨",
-    "temp_max": 24,
-    "temp_min": 14,
-    "precip": 0.0
-   },
-   "陕西省": {
-    "city": "西安",
-    "temp_max": 26,
-    "temp_min": 16,
-    "precip": 0.0
-   },
-   "甘肃省": {
-    "city": "兰州",
-    "temp_max": 23,
-    "temp_min": 13,
-    "precip": 0.0
-   },
-   "青海省": {
-    "city": "西宁",
-    "temp_max": 18,
-    "temp_min": 8,
-    "precip": 0.0
-   },
-   "宁夏回族自治区": {
-    "city": "银川",
-    "temp_max": 22,
-    "temp_min": 12,
-    "precip": 0.0
-   },
-   "新疆维吾尔自治区": {
-    "city": "乌鲁木齐",
-    "temp_max": 30,
-    "temp_min": 20,
-    "precip": 0.0
-   }
-  },
-  "2026-06-09": {
-   "北京市": {
-    "city": "北京",
-    "temp_max": 25,
-    "temp_min": 17,
-    "precip": 4.5
-   },
-   "天津市": {
-    "city": "天津",
-    "temp_max": 25,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "河北省": {
-    "city": "石家庄",
-    "temp_max": 29,
-    "temp_min": 15,
-    "precip": 0.0
-   },
-   "山西省": {
-    "city": "太原",
-    "temp_max": 27,
-    "temp_min": 10,
-    "precip": 0.0
-   },
-   "内蒙古自治区": {
-    "city": "呼和浩特",
-    "temp_max": 24,
-    "temp_min": 9,
-    "precip": 0.0
-   },
-   "辽宁省": {
-    "city": "沈阳",
-    "temp_max": 23,
-    "temp_min": 13,
-    "precip": 0.9
-   },
-   "吉林省": {
-    "city": "长春",
-    "temp_max": 20,
-    "temp_min": 12,
-    "precip": 0.2
-   },
-   "黑龙江省": {
-    "city": "哈尔滨",
-    "temp_max": 21,
-    "temp_min": 12,
-    "precip": 1.2
-   },
-   "上海市": {
-    "city": "上海",
-    "temp_max": 26,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "江苏省": {
-    "city": "南京",
-    "temp_max": 30,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "浙江省": {
-    "city": "杭州",
-    "temp_max": 26,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "安徽省": {
-    "city": "合肥",
-    "temp_max": 28,
-    "temp_min": 16,
-    "precip": 0.0
-   },
-   "福建省": {
-    "city": "福州",
-    "temp_max": 23,
-    "temp_min": 20,
-    "precip": 2.0
-   },
-   "江西省": {
-    "city": "南昌",
-    "temp_max": 24,
-    "temp_min": 19,
-    "precip": 0.0
-   },
-   "山东省": {
-    "city": "济南",
-    "temp_max": 30,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "河南省": {
-    "city": "郑州",
-    "temp_max": 33,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "湖北省": {
-    "city": "武汉",
-    "temp_max": 28,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "湖南省": {
-    "city": "长沙",
-    "temp_max": 25,
-    "temp_min": 19,
-    "precip": 0.0
-   },
-   "广东省": {
-    "city": "广州",
-    "temp_max": 27,
-    "temp_min": 23,
-    "precip": 3.5
-   },
-   "广西壮族自治区": {
-    "city": "南宁",
-    "temp_max": 28,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "海南省": {
-    "city": "海口",
-    "temp_max": 30,
-    "temp_min": 25,
-    "precip": 1.6
-   },
-   "重庆市": {
-    "city": "重庆",
-    "temp_max": 24,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "四川省": {
-    "city": "成都",
-    "temp_max": 28,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "贵州省": {
-    "city": "贵阳",
-    "temp_max": 20,
-    "temp_min": 15,
-    "precip": 0.0
-   },
-   "云南省": {
-    "city": "昆明",
-    "temp_max": 21,
-    "temp_min": 13,
-    "precip": 3.6
-   },
-   "西藏自治区": {
-    "city": "拉萨",
-    "temp_max": 26,
-    "temp_min": 12,
-    "precip": 0.0
-   },
-   "陕西省": {
-    "city": "西安",
-    "temp_max": 30,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "甘肃省": {
-    "city": "兰州",
-    "temp_max": 30,
-    "temp_min": 15,
-    "precip": 0.0
-   },
-   "青海省": {
-    "city": "西宁",
-    "temp_max": 21,
-    "temp_min": 8,
-    "precip": 0.0
-   },
-   "宁夏回族自治区": {
-    "city": "银川",
-    "temp_max": 27,
-    "temp_min": 12,
-    "precip": 0.0
-   },
-   "新疆维吾尔自治区": {
-    "city": "乌鲁木齐",
-    "temp_max": 29,
-    "temp_min": 20,
-    "precip": 0.0
-   }
-  },
-  "2026-06-10": {
-   "北京市": {
-    "city": "北京",
-    "temp_max": 24,
-    "temp_min": 15,
-    "precip": 0.0
-   },
-   "天津市": {
-    "city": "天津",
-    "temp_max": 26,
-    "temp_min": 19,
-    "precip": 0.0
-   },
-   "河北省": {
-    "city": "石家庄",
-    "temp_max": 28,
-    "temp_min": 16,
-    "precip": 0.0
-   },
-   "山西省": {
-    "city": "太原",
-    "temp_max": 30,
-    "temp_min": 12,
-    "precip": 0.0
-   },
-   "内蒙古自治区": {
-    "city": "呼和浩特",
-    "temp_max": 25,
-    "temp_min": 10,
-    "precip": 0.0
-   },
-   "辽宁省": {
-    "city": "沈阳",
-    "temp_max": 25,
-    "temp_min": 14,
-    "precip": 1.7
-   },
-   "吉林省": {
-    "city": "长春",
-    "temp_max": 24,
-    "temp_min": 14,
-    "precip": 4.1
-   },
-   "黑龙江省": {
-    "city": "哈尔滨",
-    "temp_max": 23,
-    "temp_min": 13,
-    "precip": 2.8
-   },
-   "上海市": {
-    "city": "上海",
-    "temp_max": 31,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "江苏省": {
-    "city": "南京",
-    "temp_max": 34,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "浙江省": {
-    "city": "杭州",
-    "temp_max": 31,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "安徽省": {
-    "city": "合肥",
-    "temp_max": 31,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "福建省": {
-    "city": "福州",
-    "temp_max": 26,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "江西省": {
-    "city": "南昌",
-    "temp_max": 29,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "山东省": {
-    "city": "济南",
-    "temp_max": 29,
-    "temp_min": 18,
-    "precip": 1.7
-   },
-   "河南省": {
-    "city": "郑州",
-    "temp_max": 34,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "湖北省": {
-    "city": "武汉",
-    "temp_max": 30,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "湖南省": {
-    "city": "长沙",
-    "temp_max": 28,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "广东省": {
-    "city": "广州",
-    "temp_max": 32,
-    "temp_min": 24,
-    "precip": 0.0
-   },
-   "广西壮族自治区": {
-    "city": "南宁",
-    "temp_max": 31,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "海南省": {
-    "city": "海口",
-    "temp_max": 32,
-    "temp_min": 25,
-    "precip": 0.0
-   },
-   "重庆市": {
-    "city": "重庆",
-    "temp_max": 26,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "四川省": {
-    "city": "成都",
-    "temp_max": 30,
-    "temp_min": 19,
-    "precip": 0.0
-   },
-   "贵州省": {
-    "city": "贵阳",
-    "temp_max": 24,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "云南省": {
-    "city": "昆明",
-    "temp_max": 21,
-    "temp_min": 13,
-    "precip": 4.1
-   },
-   "西藏自治区": {
-    "city": "拉萨",
-    "temp_max": 25,
-    "temp_min": 12,
-    "precip": 0.0
-   },
-   "陕西省": {
-    "city": "西安",
-    "temp_max": 31,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "甘肃省": {
-    "city": "兰州",
-    "temp_max": 30,
-    "temp_min": 15,
-    "precip": 0.0
-   },
-   "青海省": {
-    "city": "西宁",
-    "temp_max": 22,
-    "temp_min": 9,
-    "precip": 2.2
-   },
-   "宁夏回族自治区": {
-    "city": "银川",
-    "temp_max": 30,
-    "temp_min": 13,
-    "precip": 0.0
-   },
-   "新疆维吾尔自治区": {
-    "city": "乌鲁木齐",
-    "temp_max": 32,
-    "temp_min": 22,
-    "precip": 0.0
-   }
-  },
-  "2026-06-11": {
-   "北京市": {
-    "city": "北京",
-    "temp_max": 31,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "天津市": {
-    "city": "天津",
-    "temp_max": 29,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "河北省": {
-    "city": "石家庄",
-    "temp_max": 31,
-    "temp_min": 19,
-    "precip": 0.0
-   },
-   "山西省": {
-    "city": "太原",
-    "temp_max": 31,
-    "temp_min": 14,
-    "precip": 0.0
-   },
-   "内蒙古自治区": {
-    "city": "呼和浩特",
-    "temp_max": 28,
-    "temp_min": 15,
-    "precip": 0.0
-   },
-   "辽宁省": {
-    "city": "沈阳",
-    "temp_max": 28,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "吉林省": {
-    "city": "长春",
-    "temp_max": 25,
-    "temp_min": 16,
-    "precip": 1.8
-   },
-   "黑龙江省": {
-    "city": "哈尔滨",
-    "temp_max": 24,
-    "temp_min": 15,
-    "precip": 0.2
-   },
-   "上海市": {
-    "city": "上海",
-    "temp_max": 32,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "江苏省": {
-    "city": "南京",
-    "temp_max": 35,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "浙江省": {
-    "city": "杭州",
-    "temp_max": 32,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "安徽省": {
-    "city": "合肥",
-    "temp_max": 32,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "福建省": {
-    "city": "福州",
-    "temp_max": 29,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "江西省": {
-    "city": "南昌",
-    "temp_max": 31,
-    "temp_min": 24,
-    "precip": 0.0
-   },
-   "山东省": {
-    "city": "济南",
-    "temp_max": 31,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "河南省": {
-    "city": "郑州",
-    "temp_max": 36,
-    "temp_min": 25,
-    "precip": 0.0
-   },
-   "湖北省": {
-    "city": "武汉",
-    "temp_max": 32,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "湖南省": {
-    "city": "长沙",
-    "temp_max": 30,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "广东省": {
-    "city": "广州",
-    "temp_max": 31,
-    "temp_min": 24,
-    "precip": 4.1
-   },
-   "广西壮族自治区": {
-    "city": "南宁",
-    "temp_max": 32,
-    "temp_min": 24,
-    "precip": 0.0
-   },
-   "海南省": {
-    "city": "海口",
-    "temp_max": 32,
-    "temp_min": 25,
-    "precip": 1.8
-   },
-   "重庆市": {
-    "city": "重庆",
-    "temp_max": 28,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "四川省": {
-    "city": "成都",
-    "temp_max": 30,
-    "temp_min": 18,
-    "precip": 2.2
-   },
-   "贵州省": {
-    "city": "贵阳",
-    "temp_max": 24,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "云南省": {
-    "city": "昆明",
-    "temp_max": 20,
-    "temp_min": 13,
-    "precip": 4.0
-   },
-   "西藏自治区": {
-    "city": "拉萨",
-    "temp_max": 25,
-    "temp_min": 9,
-    "precip": 3.7
-   },
-   "陕西省": {
-    "city": "西安",
-    "temp_max": 33,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "甘肃省": {
-    "city": "兰州",
-    "temp_max": 30,
-    "temp_min": 16,
-    "precip": 0.0
-   },
-   "青海省": {
-    "city": "西宁",
-    "temp_max": 23,
-    "temp_min": 10,
-    "precip": 2.7
-   },
-   "宁夏回族自治区": {
-    "city": "银川",
-    "temp_max": 32,
-    "temp_min": 16,
-    "precip": 0.0
-   },
-   "新疆维吾尔自治区": {
-    "city": "乌鲁木齐",
-    "temp_max": 33,
-    "temp_min": 21,
-    "precip": 0.0
-   }
-  },
-  "2026-06-12": {
-   "北京市": {
-    "city": "北京",
-    "temp_max": 29,
-    "temp_min": 17,
-    "precip": 2.1
-   },
-   "天津市": {
-    "city": "天津",
-    "temp_max": 32,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "河北省": {
-    "city": "石家庄",
-    "temp_max": 34,
-    "temp_min": 22,
-    "precip": 3.8
-   },
-   "山西省": {
-    "city": "太原",
-    "temp_max": 33,
-    "temp_min": 14,
-    "precip": 4.0
-   },
-   "内蒙古自治区": {
-    "city": "呼和浩特",
-    "temp_max": 28,
-    "temp_min": 14,
-    "precip": 0.0
-   },
-   "辽宁省": {
-    "city": "沈阳",
-    "temp_max": 31,
-    "temp_min": 18,
-    "precip": 3.6
-   },
-   "吉林省": {
-    "city": "长春",
-    "temp_max": 26,
-    "temp_min": 14,
-    "precip": 5.9
-   },
-   "黑龙江省": {
-    "city": "哈尔滨",
-    "temp_max": 25,
-    "temp_min": 14,
-    "precip": 4.2
-   },
-   "上海市": {
-    "city": "上海",
-    "temp_max": 31,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "江苏省": {
-    "city": "南京",
-    "temp_max": 35,
-    "temp_min": 26,
-    "precip": 0.0
-   },
-   "浙江省": {
-    "city": "杭州",
-    "temp_max": 32,
-    "temp_min": 22,
-    "precip": 4.1
-   },
-   "安徽省": {
-    "city": "合肥",
-    "temp_max": 30,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "福建省": {
-    "city": "福州",
-    "temp_max": 30,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "江西省": {
-    "city": "南昌",
-    "temp_max": 31,
-    "temp_min": 22,
-    "precip": 3.8
-   },
-   "山东省": {
-    "city": "济南",
-    "temp_max": 34,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "河南省": {
-    "city": "郑州",
-    "temp_max": 36,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "湖北省": {
-    "city": "武汉",
-    "temp_max": 28,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "湖南省": {
-    "city": "长沙",
-    "temp_max": 31,
-    "temp_min": 23,
-    "precip": 4.9
-   },
-   "广东省": {
-    "city": "广州",
-    "temp_max": 30,
-    "temp_min": 24,
-    "precip": 10.0
-   },
-   "广西壮族自治区": {
-    "city": "南宁",
-    "temp_max": 32,
-    "temp_min": 25,
-    "precip": 3.3
-   },
-   "海南省": {
-    "city": "海口",
-    "temp_max": 28,
-    "temp_min": 25,
-    "precip": 2.6
-   },
-   "重庆市": {
-    "city": "重庆",
-    "temp_max": 26,
-    "temp_min": 20,
-    "precip": 3.0
-   },
-   "四川省": {
-    "city": "成都",
-    "temp_max": 28,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "贵州省": {
-    "city": "贵阳",
-    "temp_max": 26,
-    "temp_min": 18,
-    "precip": 8.9
-   },
-   "云南省": {
-    "city": "昆明",
-    "temp_max": 24,
-    "temp_min": 15,
-    "precip": 0.6
-   },
-   "西藏自治区": {
-    "city": "拉萨",
-    "temp_max": 23,
-    "temp_min": 11,
-    "precip": 0.0
-   },
-   "陕西省": {
-    "city": "西安",
-    "temp_max": 34,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "甘肃省": {
-    "city": "兰州",
-    "temp_max": 28,
-    "temp_min": 15,
-    "precip": 0.0
-   },
-   "青海省": {
-    "city": "西宁",
-    "temp_max": 23,
-    "temp_min": 9,
-    "precip": 0.8
-   },
-   "宁夏回族自治区": {
-    "city": "银川",
-    "temp_max": 33,
-    "temp_min": 16,
-    "precip": 0.0
-   },
-   "新疆维吾尔自治区": {
-    "city": "乌鲁木齐",
-    "temp_max": 32,
-    "temp_min": 22,
-    "precip": 0.0
-   }
-  },
-  "2026-06-13": {
-   "北京市": {
-    "city": "北京",
-    "temp_max": 29,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "天津市": {
-    "city": "天津",
-    "temp_max": 28,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "河北省": {
-    "city": "石家庄",
-    "temp_max": 33,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "山西省": {
-    "city": "太原",
-    "temp_max": 31,
-    "temp_min": 15,
-    "precip": 2.3
-   },
-   "内蒙古自治区": {
-    "city": "呼和浩特",
-    "temp_max": 27,
-    "temp_min": 15,
-    "precip": 0.0
-   },
-   "辽宁省": {
-    "city": "沈阳",
-    "temp_max": 27,
-    "temp_min": 17,
-    "precip": 15.9
-   },
-   "吉林省": {
-    "city": "长春",
-    "temp_max": 25,
-    "temp_min": 15,
-    "precip": 8.3
-   },
-   "黑龙江省": {
-    "city": "哈尔滨",
-    "temp_max": 20,
-    "temp_min": 13,
-    "precip": 0.0
-   },
-   "上海市": {
-    "city": "上海",
-    "temp_max": 30,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "江苏省": {
-    "city": "南京",
-    "temp_max": 30,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "浙江省": {
-    "city": "杭州",
-    "temp_max": 28,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "安徽省": {
-    "city": "合肥",
-    "temp_max": 31,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "福建省": {
-    "city": "福州",
-    "temp_max": 27,
-    "temp_min": 23,
-    "precip": 1.2
-   },
-   "江西省": {
-    "city": "南昌",
-    "temp_max": 28,
-    "temp_min": 22,
-    "precip": 3.6
-   },
-   "山东省": {
-    "city": "济南",
-    "temp_max": 33,
-    "temp_min": 19,
-    "precip": 12.4
-   },
-   "河南省": {
-    "city": "郑州",
-    "temp_max": 35,
-    "temp_min": 24,
-    "precip": 1.0
-   },
-   "湖北省": {
-    "city": "武汉",
-    "temp_max": 30,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "湖南省": {
-    "city": "长沙",
-    "temp_max": 27,
-    "temp_min": 23,
-    "precip": 0.6
-   },
-   "广东省": {
-    "city": "广州",
-    "temp_max": 29,
-    "temp_min": 25,
-    "precip": 13.6
-   },
-   "广西壮族自治区": {
-    "city": "南宁",
-    "temp_max": 32,
-    "temp_min": 24,
-    "precip": 3.7
-   },
-   "海南省": {
-    "city": "海口",
-    "temp_max": 29,
-    "temp_min": 27,
-    "precip": 0.2
-   },
-   "重庆市": {
-    "city": "重庆",
-    "temp_max": 31,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "四川省": {
-    "city": "成都",
-    "temp_max": 31,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "贵州省": {
-    "city": "贵阳",
-    "temp_max": 25,
-    "temp_min": 19,
-    "precip": 2.2
-   },
-   "云南省": {
-    "city": "昆明",
-    "temp_max": 24,
-    "temp_min": 17,
-    "precip": 11.0
-   },
-   "西藏自治区": {
-    "city": "拉萨",
-    "temp_max": 25,
-    "temp_min": 11,
-    "precip": 0.0
-   },
-   "陕西省": {
-    "city": "西安",
-    "temp_max": 36,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "甘肃省": {
-    "city": "兰州",
-    "temp_max": 30,
-    "temp_min": 19,
-    "precip": 0.0
-   },
-   "青海省": {
-    "city": "西宁",
-    "temp_max": 26,
-    "temp_min": 11,
-    "precip": 0.0
-   },
-   "宁夏回族自治区": {
-    "city": "银川",
-    "temp_max": 34,
-    "temp_min": 15,
-    "precip": 0.0
-   },
-   "新疆维吾尔自治区": {
-    "city": "乌鲁木齐",
-    "temp_max": 32,
-    "temp_min": 22,
-    "precip": 0.0
-   }
-  },
-  "2026-06-14": {
-   "北京市": {
-    "city": "北京",
-    "temp_max": 25,
-    "temp_min": 16,
-    "precip": 13.5
-   },
-   "天津市": {
-    "city": "天津",
-    "temp_max": 26,
-    "temp_min": 19,
-    "precip": 0.0
-   },
-   "河北省": {
-    "city": "石家庄",
-    "temp_max": 29,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "山西省": {
-    "city": "太原",
-    "temp_max": 33,
-    "temp_min": 16,
-    "precip": 0.0
-   },
-   "内蒙古自治区": {
-    "city": "呼和浩特",
-    "temp_max": 32,
-    "temp_min": 19,
-    "precip": 0.0
-   },
-   "辽宁省": {
-    "city": "沈阳",
-    "temp_max": 21,
-    "temp_min": 16,
-    "precip": 4.8
-   },
-   "吉林省": {
-    "city": "长春",
-    "temp_max": 24,
-    "temp_min": 12,
-    "precip": 2.9
-   },
-   "黑龙江省": {
-    "city": "哈尔滨",
-    "temp_max": 22,
-    "temp_min": 14,
-    "precip": 1.1
-   },
-   "上海市": {
-    "city": "上海",
-    "temp_max": 30,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "江苏省": {
-    "city": "南京",
-    "temp_max": 33,
-    "temp_min": 24,
-    "precip": 0.0
-   },
-   "浙江省": {
-    "city": "杭州",
-    "temp_max": 32,
-    "temp_min": 23,
-    "precip": 0.9
-   },
-   "安徽省": {
-    "city": "合肥",
-    "temp_max": 32,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "福建省": {
-    "city": "福州",
-    "temp_max": 28,
-    "temp_min": 23,
-    "precip": 7.2
-   },
-   "江西省": {
-    "city": "南昌",
-    "temp_max": 30,
-    "temp_min": 25,
-    "precip": 0.0
-   },
-   "山东省": {
-    "city": "济南",
-    "temp_max": 27,
-    "temp_min": 19,
-    "precip": 2.2
-   },
-   "河南省": {
-    "city": "郑州",
-    "temp_max": 36,
-    "temp_min": 25,
-    "precip": 0.0
-   },
-   "湖北省": {
-    "city": "武汉",
-    "temp_max": 33,
-    "temp_min": 24,
-    "precip": 0.0
-   },
-   "湖南省": {
-    "city": "长沙",
-    "temp_max": 31,
-    "temp_min": 24,
-    "precip": 2.3
-   },
-   "广东省": {
-    "city": "广州",
-    "temp_max": 29,
-    "temp_min": 24,
-    "precip": 19.7
-   },
-   "广西壮族自治区": {
-    "city": "南宁",
-    "temp_max": 31,
-    "temp_min": 24,
-    "precip": 11.6
-   },
-   "海南省": {
-    "city": "海口",
-    "temp_max": 31,
-    "temp_min": 27,
-    "precip": 3.5
-   },
-   "重庆市": {
-    "city": "重庆",
-    "temp_max": 32,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "四川省": {
-    "city": "成都",
-    "temp_max": 31,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "贵州省": {
-    "city": "贵阳",
-    "temp_max": 27,
-    "temp_min": 20,
-    "precip": 4.1
-   },
-   "云南省": {
-    "city": "昆明",
-    "temp_max": 22,
-    "temp_min": 17,
-    "precip": 12.7
-   },
-   "西藏自治区": {
-    "city": "拉萨",
-    "temp_max": 25,
-    "temp_min": 11,
-    "precip": 0.0
-   },
-   "陕西省": {
-    "city": "西安",
-    "temp_max": 36,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "甘肃省": {
-    "city": "兰州",
-    "temp_max": 32,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "青海省": {
-    "city": "西宁",
-    "temp_max": 26,
-    "temp_min": 10,
-    "precip": 0.2
-   },
-   "宁夏回族自治区": {
-    "city": "银川",
-    "temp_max": 34,
-    "temp_min": 16,
-    "precip": 0.0
-   },
-   "新疆维吾尔自治区": {
-    "city": "乌鲁木齐",
-    "temp_max": 33,
-    "temp_min": 22,
-    "precip": 0.0
-   }
-  },
-  "2026-06-15": {
-   "北京市": {
-    "city": "北京",
-    "temp_max": 26,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "天津市": {
-    "city": "天津",
-    "temp_max": 29,
-    "temp_min": 19,
-    "precip": 0.0
-   },
-   "河北省": {
-    "city": "石家庄",
-    "temp_max": 29,
-    "temp_min": 20,
-    "precip": 3.6
-   },
-   "山西省": {
-    "city": "太原",
-    "temp_max": 34,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "内蒙古自治区": {
-    "city": "呼和浩特",
-    "temp_max": 27,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "辽宁省": {
-    "city": "沈阳",
-    "temp_max": 24,
-    "temp_min": 14,
-    "precip": 2.5
-   },
-   "吉林省": {
-    "city": "长春",
-    "temp_max": 26,
-    "temp_min": 13,
-    "precip": 4.8
-   },
-   "黑龙江省": {
-    "city": "哈尔滨",
-    "temp_max": 24,
-    "temp_min": 14,
-    "precip": 1.9
-   },
-   "上海市": {
-    "city": "上海",
-    "temp_max": 30,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "江苏省": {
-    "city": "南京",
-    "temp_max": 35,
-    "temp_min": 22,
-    "precip": 1.7
-   },
-   "浙江省": {
-    "city": "杭州",
-    "temp_max": 33,
-    "temp_min": 22,
-    "precip": 3.6
-   },
-   "安徽省": {
-    "city": "合肥",
-    "temp_max": 32,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "福建省": {
-    "city": "福州",
-    "temp_max": 27,
-    "temp_min": 23,
-    "precip": 37.3
-   },
-   "江西省": {
-    "city": "南昌",
-    "temp_max": 30,
-    "temp_min": 25,
-    "precip": 2.6
-   },
-   "山东省": {
-    "city": "济南",
-    "temp_max": 28,
-    "temp_min": 19,
-    "precip": 4.8
-   },
-   "河南省": {
-    "city": "郑州",
-    "temp_max": 36,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "湖北省": {
-    "city": "武汉",
-    "temp_max": 34,
-    "temp_min": 23,
-    "precip": 0.3
-   },
-   "湖南省": {
-    "city": "长沙",
-    "temp_max": 32,
-    "temp_min": 25,
-    "precip": 13.4
-   },
-   "广东省": {
-    "city": "广州",
-    "temp_max": 30,
-    "temp_min": 25,
-    "precip": 4.4
-   },
-   "广西壮族自治区": {
-    "city": "南宁",
-    "temp_max": 31,
-    "temp_min": 24,
-    "precip": 1.4
-   },
-   "海南省": {
-    "city": "海口",
-    "temp_max": 33,
-    "temp_min": 27,
-    "precip": 0.0
-   },
-   "重庆市": {
-    "city": "重庆",
-    "temp_max": 30,
-    "temp_min": 24,
-    "precip": 0.9
-   },
-   "四川省": {
-    "city": "成都",
-    "temp_max": 31,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "贵州省": {
-    "city": "贵阳",
-    "temp_max": 26,
-    "temp_min": 19,
-    "precip": 2.8
-   },
-   "云南省": {
-    "city": "昆明",
-    "temp_max": 23,
-    "temp_min": 17,
-    "precip": 4.6
-   },
-   "西藏自治区": {
-    "city": "拉萨",
-    "temp_max": 27,
-    "temp_min": 11,
-    "precip": 0.0
-   },
-   "陕西省": {
-    "city": "西安",
-    "temp_max": 32,
-    "temp_min": 22,
-    "precip": 3.7
-   },
-   "甘肃省": {
-    "city": "兰州",
-    "temp_max": 29,
-    "temp_min": 19,
-    "precip": 0.0
-   },
-   "青海省": {
-    "city": "西宁",
-    "temp_max": 25,
-    "temp_min": 11,
-    "precip": 0.0
-   },
-   "宁夏回族自治区": {
-    "city": "银川",
-    "temp_max": 36,
-    "temp_min": 20,
-    "precip": 1.9
-   },
-   "新疆维吾尔自治区": {
-    "city": "乌鲁木齐",
-    "temp_max": 30,
-    "temp_min": 22,
-    "precip": 4.2
-   }
-  },
-  "2026-06-16": {
-   "北京市": {
-    "city": "北京",
-    "temp_max": 30,
-    "temp_min": 19,
-    "precip": 4.9
-   },
-   "天津市": {
-    "city": "天津",
-    "temp_max": 30,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "河北省": {
-    "city": "石家庄",
-    "temp_max": 32,
-    "temp_min": 22,
-    "precip": 1.2
-   },
-   "山西省": {
-    "city": "太原",
-    "temp_max": 29,
-    "temp_min": 17,
-    "precip": 1.9
-   },
-   "内蒙古自治区": {
-    "city": "呼和浩特",
-    "temp_max": 29,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "辽宁省": {
-    "city": "沈阳",
-    "temp_max": 25,
-    "temp_min": 17,
-    "precip": 3.7
-   },
-   "吉林省": {
-    "city": "长春",
-    "temp_max": 24,
-    "temp_min": 15,
-    "precip": 0.0
-   },
-   "黑龙江省": {
-    "city": "哈尔滨",
-    "temp_max": 23,
-    "temp_min": 15,
-    "precip": 2.2
-   },
-   "上海市": {
-    "city": "上海",
-    "temp_max": 30,
-    "temp_min": 24,
-    "precip": 0.0
-   },
-   "江苏省": {
-    "city": "南京",
-    "temp_max": 33,
-    "temp_min": 23,
-    "precip": 3.9
-   },
-   "浙江省": {
-    "city": "杭州",
-    "temp_max": 34,
-    "temp_min": 23,
-    "precip": 0.6
-   },
-   "安徽省": {
-    "city": "合肥",
-    "temp_max": 31,
-    "temp_min": 23,
-    "precip": 4.1
-   },
-   "福建省": {
-    "city": "福州",
-    "temp_max": 28,
-    "temp_min": 24,
-    "precip": 1.8
-   },
-   "江西省": {
-    "city": "南昌",
-    "temp_max": 33,
-    "temp_min": 25,
-    "precip": 4.1
-   },
-   "山东省": {
-    "city": "济南",
-    "temp_max": 30,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "河南省": {
-    "city": "郑州",
-    "temp_max": 33,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "湖北省": {
-    "city": "武汉",
-    "temp_max": 33,
-    "temp_min": 24,
-    "precip": 3.3
-   },
-   "湖南省": {
-    "city": "长沙",
-    "temp_max": 33,
-    "temp_min": 25,
-    "precip": 0.3
-   },
-   "广东省": {
-    "city": "广州",
-    "temp_max": 28,
-    "temp_min": 24,
-    "precip": 4.8
-   },
-   "广西壮族自治区": {
-    "city": "南宁",
-    "temp_max": 32,
-    "temp_min": 25,
-    "precip": 3.2
-   },
-   "海南省": {
-    "city": "海口",
-    "temp_max": 34,
-    "temp_min": 28,
-    "precip": 1.0
-   },
-   "重庆市": {
-    "city": "重庆",
-    "temp_max": 30,
-    "temp_min": 22,
-    "precip": 0.6
-   },
-   "四川省": {
-    "city": "成都",
-    "temp_max": 30,
-    "temp_min": 21,
-    "precip": 3.3
-   },
-   "贵州省": {
-    "city": "贵阳",
-    "temp_max": 27,
-    "temp_min": 19,
-    "precip": 0.2
-   },
-   "云南省": {
-    "city": "昆明",
-    "temp_max": 25,
-    "temp_min": 17,
-    "precip": 3.0
-   },
-   "西藏自治区": {
-    "city": "拉萨",
-    "temp_max": 24,
-    "temp_min": 12,
-    "precip": 0.0
-   },
-   "陕西省": {
-    "city": "西安",
-    "temp_max": 33,
-    "temp_min": 23,
-    "precip": 3.0
-   },
-   "甘肃省": {
-    "city": "兰州",
-    "temp_max": 31,
-    "temp_min": 19,
-    "precip": 0.3
-   },
-   "青海省": {
-    "city": "西宁",
-    "temp_max": 22,
-    "temp_min": 11,
-    "precip": 4.5
-   },
-   "宁夏回族自治区": {
-    "city": "银川",
-    "temp_max": 28,
-    "temp_min": 17,
-    "precip": 3.5
-   },
-   "新疆维吾尔自治区": {
-    "city": "乌鲁木齐",
-    "temp_max": 33,
-    "temp_min": 21,
-    "precip": 0.0
-   }
-  },
-  "2026-06-17": {
-   "北京市": {
-    "city": "北京",
-    "temp_max": 27,
-    "temp_min": 19,
-    "precip": 2.6
-   },
-   "天津市": {
-    "city": "天津",
-    "temp_max": 28,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "河北省": {
-    "city": "石家庄",
-    "temp_max": 30,
-    "temp_min": 19,
-    "precip": 3.4
-   },
-   "山西省": {
-    "city": "太原",
-    "temp_max": 28,
-    "temp_min": 17,
-    "precip": 0.4
-   },
-   "内蒙古自治区": {
-    "city": "呼和浩特",
-    "temp_max": 28,
-    "temp_min": 17,
-    "precip": 0.3
-   },
-   "辽宁省": {
-    "city": "沈阳",
-    "temp_max": 27,
-    "temp_min": 17,
-    "precip": 2.7
-   },
-   "吉林省": {
-    "city": "长春",
-    "temp_max": 26,
-    "temp_min": 17,
-    "precip": 0.2
-   },
-   "黑龙江省": {
-    "city": "哈尔滨",
-    "temp_max": 25,
-    "temp_min": 15,
-    "precip": 2.2
-   },
-   "上海市": {
-    "city": "上海",
-    "temp_max": 31,
-    "temp_min": 24,
-    "precip": 1.4
-   },
-   "江苏省": {
-    "city": "南京",
-    "temp_max": 32,
-    "temp_min": 23,
-    "precip": 1.1
-   },
-   "浙江省": {
-    "city": "杭州",
-    "temp_max": 33,
-    "temp_min": 23,
-    "precip": 3.1
-   },
-   "安徽省": {
-    "city": "合肥",
-    "temp_max": 30,
-    "temp_min": 24,
-    "precip": 3.0
-   },
-   "福建省": {
-    "city": "福州",
-    "temp_max": 30,
-    "temp_min": 24,
-    "precip": 3.8
-   },
-   "江西省": {
-    "city": "南昌",
-    "temp_max": 29,
-    "temp_min": 25,
-    "precip": 4.5
-   },
-   "山东省": {
-    "city": "济南",
-    "temp_max": 32,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "河南省": {
-    "city": "郑州",
-    "temp_max": 35,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "湖北省": {
-    "city": "武汉",
-    "temp_max": 28,
-    "temp_min": 24,
-    "precip": 1.3
-   },
-   "湖南省": {
-    "city": "长沙",
-    "temp_max": 28,
-    "temp_min": 24,
-    "precip": 0.7
-   },
-   "广东省": {
-    "city": "广州",
-    "temp_max": 28,
-    "temp_min": 25,
-    "precip": 4.5
-   },
-   "广西壮族自治区": {
-    "city": "南宁",
-    "temp_max": 31,
-    "temp_min": 25,
-    "precip": 1.0
-   },
-   "海南省": {
-    "city": "海口",
-    "temp_max": 34,
-    "temp_min": 28,
-    "precip": 3.9
-   },
-   "重庆市": {
-    "city": "重庆",
-    "temp_max": 26,
-    "temp_min": 21,
-    "precip": 2.6
-   },
-   "四川省": {
-    "city": "成都",
-    "temp_max": 28,
-    "temp_min": 22,
-    "precip": 3.5
-   },
-   "贵州省": {
-    "city": "贵阳",
-    "temp_max": 26,
-    "temp_min": 19,
-    "precip": 0.3
-   },
-   "云南省": {
-    "city": "昆明",
-    "temp_max": 25,
-    "temp_min": 17,
-    "precip": 1.2
-   },
-   "西藏自治区": {
-    "city": "拉萨",
-    "temp_max": 24,
-    "temp_min": 12,
-    "precip": 3.1
-   },
-   "陕西省": {
-    "city": "西安",
-    "temp_max": 30,
-    "temp_min": 23,
-    "precip": 3.3
-   },
-   "甘肃省": {
-    "city": "兰州",
-    "temp_max": 30,
-    "temp_min": 17,
-    "precip": 2.9
-   },
-   "青海省": {
-    "city": "西宁",
-    "temp_max": 21,
-    "temp_min": 9,
-    "precip": 3.3
-   },
-   "宁夏回族自治区": {
-    "city": "银川",
-    "temp_max": 30,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "新疆维吾尔自治区": {
-    "city": "乌鲁木齐",
-    "temp_max": 28,
-    "temp_min": 20,
-    "precip": 4.4
-   }
-  },
-  "2026-06-18": {
-   "北京市": {
-    "city": "北京",
-    "temp_max": 38,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "天津市": {
-    "city": "天津",
-    "temp_max": 38,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "河北省": {
-    "city": "石家庄",
-    "temp_max": 39,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "山西省": {
-    "city": "太原",
-    "temp_max": 33,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "内蒙古自治区": {
-    "city": "呼和浩特",
-    "temp_max": 36,
-    "temp_min": 19,
-    "precip": 3.5
-   },
-   "辽宁省": {
-    "city": "沈阳",
-    "temp_max": 31,
-    "temp_min": 15,
-    "precip": 0.2
-   },
-   "吉林省": {
-    "city": "长春",
-    "temp_max": 27,
-    "temp_min": 18,
-    "precip": 3.6
-   },
-   "黑龙江省": {
-    "city": "哈尔滨",
-    "temp_max": 26,
-    "temp_min": 19,
-    "precip": 2.0
-   },
-   "上海市": {
-    "city": "上海",
-    "temp_max": 32,
-    "temp_min": 25,
-    "precip": 0.0
-   },
-   "江苏省": {
-    "city": "南京",
-    "temp_max": 35,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "浙江省": {
-    "city": "杭州",
-    "temp_max": 31,
-    "temp_min": 22,
-    "precip": 1.4
-   },
-   "安徽省": {
-    "city": "合肥",
-    "temp_max": 34,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "福建省": {
-    "city": "福州",
-    "temp_max": 26,
-    "temp_min": 22,
-    "precip": 2.6
-   },
-   "江西省": {
-    "city": "南昌",
-    "temp_max": 30,
-    "temp_min": 23,
-    "precip": 4.2
-   },
-   "山东省": {
-    "city": "济南",
-    "temp_max": 37,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "河南省": {
-    "city": "郑州",
-    "temp_max": 38,
-    "temp_min": 24,
-    "precip": 0.0
-   },
-   "湖北省": {
-    "city": "武汉",
-    "temp_max": 32,
-    "temp_min": 24,
-    "precip": 0.0
-   },
-   "湖南省": {
-    "city": "长沙",
-    "temp_max": 28,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "广东省": {
-    "city": "广州",
-    "temp_max": 27,
-    "temp_min": 25,
-    "precip": 4.3
-   },
-   "广西壮族自治区": {
-    "city": "南宁",
-    "temp_max": 30,
-    "temp_min": 25,
-    "precip": 3.8
-   },
-   "海南省": {
-    "city": "海口",
-    "temp_max": 33,
-    "temp_min": 27,
-    "precip": 2.7
-   },
-   "重庆市": {
-    "city": "重庆",
-    "temp_max": 23,
-    "temp_min": 21,
-    "precip": 2.2
-   },
-   "四川省": {
-    "city": "成都",
-    "temp_max": 31,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "贵州省": {
-    "city": "贵阳",
-    "temp_max": 23,
-    "temp_min": 18,
-    "precip": 1.7
-   },
-   "云南省": {
-    "city": "昆明",
-    "temp_max": 22,
-    "temp_min": 17,
-    "precip": 3.5
-   },
-   "西藏自治区": {
-    "city": "拉萨",
-    "temp_max": 24,
-    "temp_min": 11,
-    "precip": 4.5
-   },
-   "陕西省": {
-    "city": "西安",
-    "temp_max": 33,
-    "temp_min": 22,
-    "precip": 2.4
-   },
-   "甘肃省": {
-    "city": "兰州",
-    "temp_max": 32,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "青海省": {
-    "city": "西宁",
-    "temp_max": 27,
-    "temp_min": 10,
-    "precip": 0.0
-   },
-   "宁夏回族自治区": {
-    "city": "银川",
-    "temp_max": 31,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "新疆维吾尔自治区": {
-    "city": "乌鲁木齐",
-    "temp_max": 31,
-    "temp_min": 19,
-    "precip": 0.0
-   }
-  },
-  "2026-06-19": {
-   "北京市": {
-    "city": "北京",
-    "temp_max": 35,
-    "temp_min": 23,
-    "precip": 2.6
-   },
-   "天津市": {
-    "city": "天津",
-    "temp_max": 36,
-    "temp_min": 25,
-    "precip": 0.8
-   },
-   "河北省": {
-    "city": "石家庄",
-    "temp_max": 39,
-    "temp_min": 28,
-    "precip": 0.0
-   },
-   "山西省": {
-    "city": "太原",
-    "temp_max": 35,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "内蒙古自治区": {
-    "city": "呼和浩特",
-    "temp_max": 34,
-    "temp_min": 20,
-    "precip": 0.0
-   },
-   "辽宁省": {
-    "city": "沈阳",
-    "temp_max": 28,
-    "temp_min": 17,
-    "precip": 2.7
-   },
-   "吉林省": {
-    "city": "长春",
-    "temp_max": 23,
-    "temp_min": 18,
-    "precip": 0.6
-   },
-   "黑龙江省": {
-    "city": "哈尔滨",
-    "temp_max": 21,
-    "temp_min": 17,
-    "precip": 4.7
-   },
-   "上海市": {
-    "city": "上海",
-    "temp_max": 28,
-    "temp_min": 24,
-    "precip": 0.0
-   },
-   "江苏省": {
-    "city": "南京",
-    "temp_max": 33,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "浙江省": {
-    "city": "杭州",
-    "temp_max": 28,
-    "temp_min": 23,
-    "precip": 1.3
-   },
-   "安徽省": {
-    "city": "合肥",
-    "temp_max": 35,
-    "temp_min": 22,
-    "precip": 0.0
-   },
-   "福建省": {
-    "city": "福州",
-    "temp_max": 25,
-    "temp_min": 23,
-    "precip": 3.9
-   },
-   "江西省": {
-    "city": "南昌",
-    "temp_max": 32,
-    "temp_min": 24,
-    "precip": 0.0
-   },
-   "山东省": {
-    "city": "济南",
-    "temp_max": 36,
-    "temp_min": 24,
-    "precip": 0.0
-   },
-   "河南省": {
-    "city": "郑州",
-    "temp_max": 36,
-    "temp_min": 26,
-    "precip": 0.0
-   },
-   "湖北省": {
-    "city": "武汉",
-    "temp_max": 34,
-    "temp_min": 25,
-    "precip": 0.0
-   },
-   "湖南省": {
-    "city": "长沙",
-    "temp_max": 33,
-    "temp_min": 24,
-    "precip": 0.0
-   },
-   "广东省": {
-    "city": "广州",
-    "temp_max": 28,
-    "temp_min": 25,
-    "precip": 3.4
-   },
-   "广西壮族自治区": {
-    "city": "南宁",
-    "temp_max": 26,
-    "temp_min": 24,
-    "precip": 4.2
-   },
-   "海南省": {
-    "city": "海口",
-    "temp_max": 34,
-    "temp_min": 28,
-    "precip": 2.2
-   },
-   "重庆市": {
-    "city": "重庆",
-    "temp_max": 32,
-    "temp_min": 23,
-    "precip": 0.5
-   },
-   "四川省": {
-    "city": "成都",
-    "temp_max": 31,
-    "temp_min": 21,
-    "precip": 4.0
-   },
-   "贵州省": {
-    "city": "贵阳",
-    "temp_max": 28,
-    "temp_min": 19,
-    "precip": 2.7
-   },
-   "云南省": {
-    "city": "昆明",
-    "temp_max": 25,
-    "temp_min": 16,
-    "precip": 3.6
-   },
-   "西藏自治区": {
-    "city": "拉萨",
-    "temp_max": 23,
-    "temp_min": 9,
-    "precip": 4.0
-   },
-   "陕西省": {
-    "city": "西安",
-    "temp_max": 36,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "甘肃省": {
-    "city": "兰州",
-    "temp_max": 32,
-    "temp_min": 19,
-    "precip": 0.0
-   },
-   "青海省": {
-    "city": "西宁",
-    "temp_max": 23,
-    "temp_min": 7,
-    "precip": 3.6
-   },
-   "宁夏回族自治区": {
-    "city": "银川",
-    "temp_max": 32,
-    "temp_min": 19,
-    "precip": 0.0
-   },
-   "新疆维吾尔自治区": {
-    "city": "乌鲁木齐",
-    "temp_max": 29,
-    "temp_min": 19,
-    "precip": 1.2
-   }
-  },
-  "2026-06-20": {
-   "北京市": {
-    "city": "北京",
-    "temp_max": 34,
-    "temp_min": 21,
-    "precip": 4.3
-   },
-   "天津市": {
-    "city": "天津",
-    "temp_max": 39,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "河北省": {
-    "city": "石家庄",
-    "temp_max": 39,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "山西省": {
-    "city": "太原",
-    "temp_max": 33,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "内蒙古自治区": {
-    "city": "呼和浩特",
-    "temp_max": 33,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "辽宁省": {
-    "city": "沈阳",
-    "temp_max": 30,
-    "temp_min": 18,
-    "precip": 2.3
-   },
-   "吉林省": {
-    "city": "长春",
-    "temp_max": 26,
-    "temp_min": 18,
-    "precip": 1.7
-   },
-   "黑龙江省": {
-    "city": "哈尔滨",
-    "temp_max": 26,
-    "temp_min": 18,
-    "precip": 5.0
-   },
-   "上海市": {
-    "city": "上海",
-    "temp_max": 32,
-    "temp_min": 25,
-    "precip": 0.0
-   },
-   "江苏省": {
-    "city": "南京",
-    "temp_max": 35,
-    "temp_min": 24,
-    "precip": 0.0
-   },
-   "浙江省": {
-    "city": "杭州",
-    "temp_max": 32,
-    "temp_min": 24,
-    "precip": 1.8
-   },
-   "安徽省": {
-    "city": "合肥",
-    "temp_max": 33,
-    "temp_min": 24,
-    "precip": 0.0
-   },
-   "福建省": {
-    "city": "福州",
-    "temp_max": 26,
-    "temp_min": 24,
-    "precip": 1.4
-   },
-   "江西省": {
-    "city": "南昌",
-    "temp_max": 33,
-    "temp_min": 25,
-    "precip": 3.7
-   },
-   "山东省": {
-    "city": "济南",
-    "temp_max": 33,
-    "temp_min": 25,
-    "precip": 0.0
-   },
-   "河南省": {
-    "city": "郑州",
-    "temp_max": 35,
-    "temp_min": 26,
-    "precip": 0.0
-   },
-   "湖北省": {
-    "city": "武汉",
-    "temp_max": 35,
-    "temp_min": 26,
-    "precip": 0.0
-   },
-   "湖南省": {
-    "city": "长沙",
-    "temp_max": 35,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "广东省": {
-    "city": "广州",
-    "temp_max": 26,
-    "temp_min": 25,
-    "precip": 2.1
-   },
-   "广西壮族自治区": {
-    "city": "南宁",
-    "temp_max": 32,
-    "temp_min": 25,
-    "precip": 3.0
-   },
-   "海南省": {
-    "city": "海口",
-    "temp_max": 33,
-    "temp_min": 27,
-    "precip": 2.6
-   },
-   "重庆市": {
-    "city": "重庆",
-    "temp_max": 30,
-    "temp_min": 21,
-    "precip": 2.0
-   },
-   "四川省": {
-    "city": "成都",
-    "temp_max": 26,
-    "temp_min": 19,
-    "precip": 4.9
-   },
-   "贵州省": {
-    "city": "贵阳",
-    "temp_max": 29,
-    "temp_min": 20,
-    "precip": 4.8
-   },
-   "云南省": {
-    "city": "昆明",
-    "temp_max": 26,
-    "temp_min": 17,
-    "precip": 3.5
-   },
-   "西藏自治区": {
-    "city": "拉萨",
-    "temp_max": 21,
-    "temp_min": 10,
-    "precip": 4.4
-   },
-   "陕西省": {
-    "city": "西安",
-    "temp_max": 35,
-    "temp_min": 23,
-    "precip": 0.0
-   },
-   "甘肃省": {
-    "city": "兰州",
-    "temp_max": 31,
-    "temp_min": 17,
-    "precip": 0.7
-   },
-   "青海省": {
-    "city": "西宁",
-    "temp_max": 23,
-    "temp_min": 6,
-    "precip": 3.4
-   },
-   "宁夏回族自治区": {
-    "city": "银川",
-    "temp_max": 33,
-    "temp_min": 18,
-    "precip": 0.0
-   },
-   "新疆维吾尔自治区": {
-    "city": "乌鲁木齐",
-    "temp_max": 30,
-    "temp_min": 18,
-    "precip": 0.0
-   }
-  },
-  "2026-06-21": {
-   "北京市": {
-    "city": "北京",
-    "temp_max": 39,
-    "temp_min": 24,
-    "precip": 0.6
-   },
-   "天津市": {
-    "city": "天津",
-    "temp_max": 39,
-    "temp_min": 27,
-    "precip": 1.8
-   },
-   "河北省": {
-    "city": "石家庄",
-    "temp_max": 43,
-    "temp_min": 26,
-    "precip": 4.9
-   },
-   "山西省": {
-    "city": "太原",
-    "temp_max": 35,
-    "temp_min": 19,
-    "precip": 3.4
-   },
-   "内蒙古自治区": {
-    "city": "呼和浩特",
-    "temp_max": 33,
-    "temp_min": 19,
-    "precip": 1.8
-   },
-   "辽宁省": {
-    "city": "沈阳",
-    "temp_max": 31,
-    "temp_min": 19,
-    "precip": 4.2
-   },
-   "吉林省": {
-    "city": "长春",
-    "temp_max": 29,
-    "temp_min": 20,
-    "precip": 2.0
-   },
-   "黑龙江省": {
-    "city": "哈尔滨",
-    "temp_max": 26,
-    "temp_min": 18,
-    "precip": 1.7
-   },
-   "上海市": {
-    "city": "上海",
-    "temp_max": 31,
-    "temp_min": 26,
-    "precip": 0.0
-   },
-   "江苏省": {
-    "city": "南京",
-    "temp_max": 34,
-    "temp_min": 27,
-    "precip": 4.4
-   },
-   "浙江省": {
-    "city": "杭州",
-    "temp_max": 34,
-    "temp_min": 26,
-    "precip": 0.0
-   },
-   "安徽省": {
-    "city": "合肥",
-    "temp_max": 34,
-    "temp_min": 26,
-    "precip": 0.0
-   },
-   "福建省": {
-    "city": "福州",
-    "temp_max": 28,
-    "temp_min": 24,
-    "precip": 1.0
-   },
-   "江西省": {
-    "city": "南昌",
-    "temp_max": 31,
-    "temp_min": 26,
-    "precip": 0.0
-   },
-   "山东省": {
-    "city": "济南",
-    "temp_max": 38,
-    "temp_min": 27,
-    "precip": 0.0
-   },
-   "河南省": {
-    "city": "郑州",
-    "temp_max": 38,
-    "temp_min": 28,
-    "precip": 0.0
-   },
-   "湖北省": {
-    "city": "武汉",
-    "temp_max": 34,
-    "temp_min": 27,
-    "precip": 0.0
-   },
-   "湖南省": {
-    "city": "长沙",
-    "temp_max": 34,
-    "temp_min": 26,
-    "precip": 4.5
-   },
-   "广东省": {
-    "city": "广州",
-    "temp_max": 27,
-    "temp_min": 25,
-    "precip": 0.8
-   },
-   "广西壮族自治区": {
-    "city": "南宁",
-    "temp_max": 30,
-    "temp_min": 25,
-    "precip": 3.0
-   },
-   "海南省": {
-    "city": "海口",
-    "temp_max": 34,
-    "temp_min": 27,
-    "precip": 2.6
-   },
-   "重庆市": {
-    "city": "重庆",
-    "temp_max": 31,
-    "temp_min": 23,
-    "precip": 3.3
-   },
-   "四川省": {
-    "city": "成都",
-    "temp_max": 32,
-    "temp_min": 21,
-    "precip": 2.9
-   },
-   "贵州省": {
-    "city": "贵阳",
-    "temp_max": 23,
-    "temp_min": 18,
-    "precip": 2.3
-   },
-   "云南省": {
-    "city": "昆明",
-    "temp_max": 25,
-    "temp_min": 17,
-    "precip": 3.5
-   },
-   "西藏自治区": {
-    "city": "拉萨",
-    "temp_max": 19,
-    "temp_min": 8,
-    "precip": 1.1
-   },
-   "陕西省": {
-    "city": "西安",
-    "temp_max": 35,
-    "temp_min": 25,
-    "precip": 0.0
-   },
-   "甘肃省": {
-    "city": "兰州",
-    "temp_max": 32,
-    "temp_min": 16,
-    "precip": 0.0
-   },
-   "青海省": {
-    "city": "西宁",
-    "temp_max": 22,
-    "temp_min": 5,
-    "precip": 3.0
-   },
-   "宁夏回族自治区": {
-    "city": "银川",
-    "temp_max": 34,
-    "temp_min": 21,
-    "precip": 0.0
-   },
-   "新疆维吾尔自治区": {
-    "city": "乌鲁木齐",
-    "temp_max": 27,
-    "temp_min": 20,
-    "precip": 5.0
-   }
-  },
-  "2026-06-22": {
-   "北京市": {
-    "city": "北京",
-    "temp_max": 30,
-    "temp_min": 25,
-    "precip": 0.0
-   },
-   "天津市": {
-    "city": "天津",
-    "temp_max": 35,
-    "temp_min": 26,
-    "precip": 1.5
-   },
-   "河北省": {
-    "city": "石家庄",
-    "temp_max": 35,
-    "temp_min": 24,
-    "precip": 2.6
-   },
-   "山西省": {
-    "city": "太原",
-    "temp_max": 32,
-    "temp_min": 19,
-    "precip": 4.7
-   },
-   "内蒙古自治区": {
-    "city": "呼和浩特",
-    "temp_max": 32,
-    "temp_min": 19,
-    "precip": 0.8
-   },
-   "辽宁省": {
-    "city": "沈阳",
-    "temp_max": 33,
-    "temp_min": 20,
-    "precip": 3.2
-   },
-   "吉林省": {
-    "city": "长春",
-    "temp_max": 26,
-    "temp_min": 21,
-    "precip": 1.4
-   },
-   "黑龙江省": {
-    "city": "哈尔滨",
-    "temp_max": 28,
-    "temp_min": 18,
-    "precip": 2.4
-   },
-   "上海市": {
-    "city": "上海",
-    "temp_max": 36,
-    "temp_min": 28,
-    "precip": 0.0
-   },
-   "江苏省": {
-    "city": "南京",
-    "temp_max": 36,
-    "temp_min": 28,
-    "precip": 0.0
-   },
-   "浙江省": {
-    "city": "杭州",
-    "temp_max": 38,
-    "temp_min": 26,
-    "precip": 0.1
-   },
-   "安徽省": {
-    "city": "合肥",
-    "temp_max": 37,
-    "temp_min": 25,
-    "precip": 0.0
-   },
-   "福建省": {
-    "city": "福州",
-    "temp_max": 29,
-    "temp_min": 25,
-    "precip": 0.5
-   },
-   "江西省": {
-    "city": "南昌",
-    "temp_max": 29,
-    "temp_min": 25,
-    "precip": 3.7
-   },
-   "山东省": {
-    "city": "济南",
-    "temp_max": 38,
-    "temp_min": 29,
-    "precip": 4.9
-   },
-   "河南省": {
-    "city": "郑州",
-    "temp_max": 38,
-    "temp_min": 30,
-    "precip": 0.0
-   },
-   "湖北省": {
-    "city": "武汉",
-    "temp_max": 36,
-    "temp_min": 26,
-    "precip": 4.6
-   },
-   "湖南省": {
-    "city": "长沙",
-    "temp_max": 32,
-    "temp_min": 26,
-    "precip": 0.1
-   },
-   "广东省": {
-    "city": "广州",
-    "temp_max": 25,
-    "temp_min": 24,
-    "precip": 2.4
-   },
-   "广西壮族自治区": {
-    "city": "南宁",
-    "temp_max": 27,
-    "temp_min": 25,
-    "precip": 1.7
-   },
-   "海南省": {
-    "city": "海口",
-    "temp_max": 35,
-    "temp_min": 28,
-    "precip": 3.8
-   },
-   "重庆市": {
-    "city": "重庆",
-    "temp_max": 33,
-    "temp_min": 24,
-    "precip": 2.2
-   },
-   "四川省": {
-    "city": "成都",
-    "temp_max": 32,
-    "temp_min": 22,
-    "precip": 4.2
-   },
-   "贵州省": {
-    "city": "贵阳",
-    "temp_max": 25,
-    "temp_min": 21,
-    "precip": 4.7
-   },
-   "云南省": {
-    "city": "昆明",
-    "temp_max": 26,
-    "temp_min": 18,
-    "precip": 4.1
-   },
-   "西藏自治区": {
-    "city": "拉萨",
-    "temp_max": 16,
-    "temp_min": 9,
-    "precip": 4.6
-   },
-   "陕西省": {
-    "city": "西安",
-    "temp_max": 34,
-    "temp_min": 21,
-    "precip": 3.9
-   },
-   "甘肃省": {
-    "city": "兰州",
-    "temp_max": 20,
-    "temp_min": 14,
-    "precip": 1.7
-   },
-   "青海省": {
-    "city": "西宁",
-    "temp_max": 19,
-    "temp_min": 6,
-    "precip": 2.5
-   },
-   "宁夏回族自治区": {
-    "city": "银川",
-    "temp_max": 28,
-    "temp_min": 17,
-    "precip": 0.0
-   },
-   "新疆维吾尔自治区": {
-    "city": "乌鲁木齐",
-    "temp_max": 32,
-    "temp_min": 21,
-    "precip": 0.0
-   }
+  "provider": "weather.com.cn",
+  "fetch_time": "2026-06-10 09:08:37",
+  "total_cities": 34,
+  "total_records": 510,
+  "data": {
+    "2026-07-09": {
+      "北京市": {
+        "city": "北京",
+        "temp_max": 26,
+        "temp_min": 16,
+        "precip": 0.0
+      },
+      "天津市": {
+        "city": "天津",
+        "temp_max": 28,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "河北省": {
+        "city": "石家庄",
+        "temp_max": 26,
+        "temp_min": 16,
+        "precip": 0.0
+      },
+      "山西省": {
+        "city": "太原",
+        "temp_max": 20,
+        "temp_min": 10,
+        "precip": 0.0
+      },
+      "内蒙古自治区": {
+        "city": "呼和浩特",
+        "temp_max": 19,
+        "temp_min": 9,
+        "precip": 0.0
+      },
+      "辽宁省": {
+        "city": "沈阳",
+        "temp_max": 23,
+        "temp_min": 13,
+        "precip": 0.0
+      },
+      "吉林省": {
+        "city": "长春",
+        "temp_max": 22,
+        "temp_min": 12,
+        "precip": 0.0
+      },
+      "黑龙江省": {
+        "city": "哈尔滨",
+        "temp_max": 21,
+        "temp_min": 11,
+        "precip": 0.0
+      },
+      "上海市": {
+        "city": "上海",
+        "temp_max": 29,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "江苏省": {
+        "city": "南京",
+        "temp_max": 28,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "浙江省": {
+        "city": "杭州",
+        "temp_max": 27,
+        "temp_min": 17,
+        "precip": 0.0
+      },
+      "安徽省": {
+        "city": "合肥",
+        "temp_max": 26,
+        "temp_min": 16,
+        "precip": 0.0
+      },
+      "福建省": {
+        "city": "福州",
+        "temp_max": 30,
+        "temp_min": 20,
+        "precip": 3.0
+      },
+      "江西省": {
+        "city": "南昌",
+        "temp_max": 29,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "山东省": {
+        "city": "济南",
+        "temp_max": 28,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "河南省": {
+        "city": "郑州",
+        "temp_max": 31,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "湖北省": {
+        "city": "武汉",
+        "temp_max": 27,
+        "temp_min": 17,
+        "precip": 0.0
+      },
+      "湖南省": {
+        "city": "长沙",
+        "temp_max": 28,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "广东省": {
+        "city": "广州",
+        "temp_max": 33,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "广西壮族自治区": {
+        "city": "南宁",
+        "temp_max": 32,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "海南省": {
+        "city": "海口",
+        "temp_max": 34,
+        "temp_min": 24,
+        "precip": 0.0
+      },
+      "重庆市": {
+        "city": "重庆",
+        "temp_max": 29,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "四川省": {
+        "city": "成都",
+        "temp_max": 29,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "贵州省": {
+        "city": "贵阳",
+        "temp_max": 24,
+        "temp_min": 14,
+        "precip": 0.0
+      },
+      "云南省": {
+        "city": "昆明",
+        "temp_max": 25,
+        "temp_min": 15,
+        "precip": 3.0
+      },
+      "西藏自治区": {
+        "city": "拉萨",
+        "temp_max": 23,
+        "temp_min": 13,
+        "precip": 0.0
+      },
+      "陕西省": {
+        "city": "西安",
+        "temp_max": 28,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "甘肃省": {
+        "city": "兰州",
+        "temp_max": 25,
+        "temp_min": 15,
+        "precip": 0.0
+      },
+      "青海省": {
+        "city": "西宁",
+        "temp_max": 18,
+        "temp_min": 8,
+        "precip": 0.0
+      },
+      "宁夏回族自治区": {
+        "city": "银川",
+        "temp_max": 24,
+        "temp_min": 14,
+        "precip": 0.0
+      },
+      "新疆维吾尔自治区": {
+        "city": "乌鲁木齐",
+        "temp_max": 31,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "台湾省": {
+        "city": "台北",
+        "temp_max": 31,
+        "temp_min": 21,
+        "precip": 50.0
+      },
+      "澳门特别行政区": {
+        "city": "澳门",
+        "temp_max": 35,
+        "temp_min": 25,
+        "precip": 0.0
+      },
+      "香港特别行政区": {
+        "city": "香港",
+        "temp_max": 33,
+        "temp_min": 28,
+        "precip": 0.0
+      }
+    },
+    "2026-06-10": {
+      "北京市": {
+        "city": "北京",
+        "temp_max": 25,
+        "temp_min": 16,
+        "precip": 0.0
+      },
+      "天津市": {
+        "city": "天津",
+        "temp_max": 27,
+        "temp_min": 19,
+        "precip": 5.0
+      },
+      "河北省": {
+        "city": "石家庄",
+        "temp_max": 28,
+        "temp_min": 16,
+        "precip": 5.0
+      },
+      "山西省": {
+        "city": "太原",
+        "temp_max": 28,
+        "temp_min": 12,
+        "precip": 0.0
+      },
+      "内蒙古自治区": {
+        "city": "呼和浩特",
+        "temp_max": 25,
+        "temp_min": 10,
+        "precip": 0.0
+      },
+      "辽宁省": {
+        "city": "沈阳",
+        "temp_max": 25,
+        "temp_min": 14,
+        "precip": 0.0
+      },
+      "吉林省": {
+        "city": "长春",
+        "temp_max": 23,
+        "temp_min": 14,
+        "precip": 5.0
+      },
+      "黑龙江省": {
+        "city": "哈尔滨",
+        "temp_max": 23,
+        "temp_min": 14,
+        "precip": 5.0
+      },
+      "上海市": {
+        "city": "上海",
+        "temp_max": 30,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "江苏省": {
+        "city": "南京",
+        "temp_max": 31,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "浙江省": {
+        "city": "杭州",
+        "temp_max": 30,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "安徽省": {
+        "city": "合肥",
+        "temp_max": 30,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "福建省": {
+        "city": "福州",
+        "temp_max": 25,
+        "temp_min": 20,
+        "precip": 3.0
+      },
+      "江西省": {
+        "city": "南昌",
+        "temp_max": 28,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "山东省": {
+        "city": "济南",
+        "temp_max": 29,
+        "temp_min": 19,
+        "precip": 5.0
+      },
+      "河南省": {
+        "city": "郑州",
+        "temp_max": 34,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "湖北省": {
+        "city": "武汉",
+        "temp_max": 31,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "湖南省": {
+        "city": "长沙",
+        "temp_max": 30,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "广东省": {
+        "city": "广州",
+        "temp_max": 31,
+        "temp_min": 24,
+        "precip": 0.0
+      },
+      "广西壮族自治区": {
+        "city": "南宁",
+        "temp_max": 31,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "海南省": {
+        "city": "海口",
+        "temp_max": 32,
+        "temp_min": 25,
+        "precip": 5.0
+      },
+      "重庆市": {
+        "city": "重庆",
+        "temp_max": 27,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "四川省": {
+        "city": "成都",
+        "temp_max": 30,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "贵州省": {
+        "city": "贵阳",
+        "temp_max": 23,
+        "temp_min": 16,
+        "precip": 0.0
+      },
+      "云南省": {
+        "city": "昆明",
+        "temp_max": 19,
+        "temp_min": 14,
+        "precip": 3.0
+      },
+      "西藏自治区": {
+        "city": "拉萨",
+        "temp_max": 26,
+        "temp_min": 10,
+        "precip": 0.0
+      },
+      "陕西省": {
+        "city": "西安",
+        "temp_max": 32,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "甘肃省": {
+        "city": "兰州",
+        "temp_max": 30,
+        "temp_min": 16,
+        "precip": 0.0
+      },
+      "青海省": {
+        "city": "西宁",
+        "temp_max": 25,
+        "temp_min": 11,
+        "precip": 0.0
+      },
+      "宁夏回族自治区": {
+        "city": "银川",
+        "temp_max": 29,
+        "temp_min": 14,
+        "precip": 0.0
+      },
+      "新疆维吾尔自治区": {
+        "city": "乌鲁木齐",
+        "temp_max": 33,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "台湾省": {
+        "city": "台北",
+        "temp_max": 23,
+        "temp_min": 21,
+        "precip": 12.5
+      },
+      "澳门特别行政区": {
+        "city": "澳门",
+        "temp_max": 29,
+        "temp_min": 25,
+        "precip": 5.0
+      },
+      "香港特别行政区": {
+        "city": "香港",
+        "temp_max": 29,
+        "temp_min": 24,
+        "precip": 8.0
+      }
+    },
+    "2026-06-11": {
+      "北京市": {
+        "city": "北京",
+        "temp_max": 31,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "天津市": {
+        "city": "天津",
+        "temp_max": 30,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "河北省": {
+        "city": "石家庄",
+        "temp_max": 31,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "山西省": {
+        "city": "太原",
+        "temp_max": 31,
+        "temp_min": 15,
+        "precip": 0.0
+      },
+      "内蒙古自治区": {
+        "city": "呼和浩特",
+        "temp_max": 29,
+        "temp_min": 15,
+        "precip": 0.0
+      },
+      "辽宁省": {
+        "city": "沈阳",
+        "temp_max": 29,
+        "temp_min": 17,
+        "precip": 0.0
+      },
+      "吉林省": {
+        "city": "长春",
+        "temp_max": 24,
+        "temp_min": 14,
+        "precip": 5.0
+      },
+      "黑龙江省": {
+        "city": "哈尔滨",
+        "temp_max": 23,
+        "temp_min": 14,
+        "precip": 5.0
+      },
+      "上海市": {
+        "city": "上海",
+        "temp_max": 31,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "江苏省": {
+        "city": "南京",
+        "temp_max": 34,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "浙江省": {
+        "city": "杭州",
+        "temp_max": 32,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "安徽省": {
+        "city": "合肥",
+        "temp_max": 31,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "福建省": {
+        "city": "福州",
+        "temp_max": 27,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "江西省": {
+        "city": "南昌",
+        "temp_max": 31,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "山东省": {
+        "city": "济南",
+        "temp_max": 31,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "河南省": {
+        "city": "郑州",
+        "temp_max": 35,
+        "temp_min": 24,
+        "precip": 0.0
+      },
+      "湖北省": {
+        "city": "武汉",
+        "temp_max": 31,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "湖南省": {
+        "city": "长沙",
+        "temp_max": 30,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "广东省": {
+        "city": "广州",
+        "temp_max": 31,
+        "temp_min": 25,
+        "precip": 0.0
+      },
+      "广西壮族自治区": {
+        "city": "南宁",
+        "temp_max": 32,
+        "temp_min": 24,
+        "precip": 0.0
+      },
+      "海南省": {
+        "city": "海口",
+        "temp_max": 32,
+        "temp_min": 24,
+        "precip": 5.0
+      },
+      "重庆市": {
+        "city": "重庆",
+        "temp_max": 28,
+        "temp_min": 21,
+        "precip": 3.0
+      },
+      "四川省": {
+        "city": "成都",
+        "temp_max": 30,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "贵州省": {
+        "city": "贵阳",
+        "temp_max": 24,
+        "temp_min": 17,
+        "precip": 0.0
+      },
+      "云南省": {
+        "city": "昆明",
+        "temp_max": 20,
+        "temp_min": 14,
+        "precip": 3.0
+      },
+      "西藏自治区": {
+        "city": "拉萨",
+        "temp_max": 24,
+        "temp_min": 8,
+        "precip": 0.0
+      },
+      "陕西省": {
+        "city": "西安",
+        "temp_max": 33,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "甘肃省": {
+        "city": "兰州",
+        "temp_max": 31,
+        "temp_min": 17,
+        "precip": 0.0
+      },
+      "青海省": {
+        "city": "西宁",
+        "temp_max": 22,
+        "temp_min": 9,
+        "precip": 3.0
+      },
+      "宁夏回族自治区": {
+        "city": "银川",
+        "temp_max": 32,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "新疆维吾尔自治区": {
+        "city": "乌鲁木齐",
+        "temp_max": 35,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "台湾省": {
+        "city": "台北",
+        "temp_max": 24,
+        "temp_min": 21,
+        "precip": 3.0
+      },
+      "澳门特别行政区": {
+        "city": "澳门",
+        "temp_max": 29,
+        "temp_min": 26,
+        "precip": 25.0
+      },
+      "香港特别行政区": {
+        "city": "香港",
+        "temp_max": 30,
+        "temp_min": 25,
+        "precip": 2.0
+      }
+    },
+    "2026-06-12": {
+      "北京市": {
+        "city": "北京",
+        "temp_max": 30,
+        "temp_min": 16,
+        "precip": 5.0
+      },
+      "天津市": {
+        "city": "天津",
+        "temp_max": 33,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "河北省": {
+        "city": "石家庄",
+        "temp_max": 33,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "山西省": {
+        "city": "太原",
+        "temp_max": 31,
+        "temp_min": 14,
+        "precip": 0.0
+      },
+      "内蒙古自治区": {
+        "city": "呼和浩特",
+        "temp_max": 26,
+        "temp_min": 14,
+        "precip": 3.0
+      },
+      "辽宁省": {
+        "city": "沈阳",
+        "temp_max": 32,
+        "temp_min": 19,
+        "precip": 5.0
+      },
+      "吉林省": {
+        "city": "长春",
+        "temp_max": 27,
+        "temp_min": 14,
+        "precip": 3.0
+      },
+      "黑龙江省": {
+        "city": "哈尔滨",
+        "temp_max": 24,
+        "temp_min": 14,
+        "precip": 5.0
+      },
+      "上海市": {
+        "city": "上海",
+        "temp_max": 31,
+        "temp_min": 26,
+        "precip": 0.0
+      },
+      "江苏省": {
+        "city": "南京",
+        "temp_max": 34,
+        "temp_min": 24,
+        "precip": 0.0
+      },
+      "浙江省": {
+        "city": "杭州",
+        "temp_max": 31,
+        "temp_min": 22,
+        "precip": 3.0
+      },
+      "安徽省": {
+        "city": "合肥",
+        "temp_max": 30,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "福建省": {
+        "city": "福州",
+        "temp_max": 29,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "江西省": {
+        "city": "南昌",
+        "temp_max": 29,
+        "temp_min": 23,
+        "precip": 12.5
+      },
+      "山东省": {
+        "city": "济南",
+        "temp_max": 35,
+        "temp_min": 25,
+        "precip": 0.0
+      },
+      "河南省": {
+        "city": "郑州",
+        "temp_max": 34,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "湖北省": {
+        "city": "武汉",
+        "temp_max": 28,
+        "temp_min": 22,
+        "precip": 5.0
+      },
+      "湖南省": {
+        "city": "长沙",
+        "temp_max": 31,
+        "temp_min": 21,
+        "precip": 12.5
+      },
+      "广东省": {
+        "city": "广州",
+        "temp_max": 29,
+        "temp_min": 24,
+        "precip": 12.5
+      },
+      "广西壮族自治区": {
+        "city": "南宁",
+        "temp_max": 32,
+        "temp_min": 25,
+        "precip": 5.0
+      },
+      "海南省": {
+        "city": "海口",
+        "temp_max": 32,
+        "temp_min": 24,
+        "precip": 5.0
+      },
+      "重庆市": {
+        "city": "重庆",
+        "temp_max": 25,
+        "temp_min": 20,
+        "precip": 3.0
+      },
+      "四川省": {
+        "city": "成都",
+        "temp_max": 29,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "贵州省": {
+        "city": "贵阳",
+        "temp_max": 26,
+        "temp_min": 17,
+        "precip": 25.0
+      },
+      "云南省": {
+        "city": "昆明",
+        "temp_max": 25,
+        "temp_min": 16,
+        "precip": 3.0
+      },
+      "西藏自治区": {
+        "city": "拉萨",
+        "temp_max": 23,
+        "temp_min": 9,
+        "precip": 0.0
+      },
+      "陕西省": {
+        "city": "西安",
+        "temp_max": 32,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "甘肃省": {
+        "city": "兰州",
+        "temp_max": 31,
+        "temp_min": 15,
+        "precip": 0.0
+      },
+      "青海省": {
+        "city": "西宁",
+        "temp_max": 24,
+        "temp_min": 10,
+        "precip": 3.0
+      },
+      "宁夏回族自治区": {
+        "city": "银川",
+        "temp_max": 33,
+        "temp_min": 15,
+        "precip": 0.0
+      },
+      "新疆维吾尔自治区": {
+        "city": "乌鲁木齐",
+        "temp_max": 31,
+        "temp_min": 20,
+        "precip": 3.0
+      },
+      "台湾省": {
+        "city": "台北",
+        "temp_max": 25,
+        "temp_min": 22,
+        "precip": 3.0
+      },
+      "澳门特别行政区": {
+        "city": "澳门",
+        "temp_max": 29,
+        "temp_min": 26,
+        "precip": 25.0
+      },
+      "香港特别行政区": {
+        "city": "香港",
+        "temp_max": 31,
+        "temp_min": 26,
+        "precip": 0.0
+      }
+    },
+    "2026-06-13": {
+      "北京市": {
+        "city": "北京",
+        "temp_max": 29,
+        "temp_min": 17,
+        "precip": 5.0
+      },
+      "天津市": {
+        "city": "天津",
+        "temp_max": 27,
+        "temp_min": 19,
+        "precip": 5.0
+      },
+      "河北省": {
+        "city": "石家庄",
+        "temp_max": 32,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "山西省": {
+        "city": "太原",
+        "temp_max": 32,
+        "temp_min": 14,
+        "precip": 0.0
+      },
+      "内蒙古自治区": {
+        "city": "呼和浩特",
+        "temp_max": 27,
+        "temp_min": 15,
+        "precip": 0.0
+      },
+      "辽宁省": {
+        "city": "沈阳",
+        "temp_max": 25,
+        "temp_min": 17,
+        "precip": 5.0
+      },
+      "吉林省": {
+        "city": "长春",
+        "temp_max": 21,
+        "temp_min": 14,
+        "precip": 12.5
+      },
+      "黑龙江省": {
+        "city": "哈尔滨",
+        "temp_max": 19,
+        "temp_min": 13,
+        "precip": 3.0
+      },
+      "上海市": {
+        "city": "上海",
+        "temp_max": 28,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "江苏省": {
+        "city": "南京",
+        "temp_max": 29,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "浙江省": {
+        "city": "杭州",
+        "temp_max": 26,
+        "temp_min": 20,
+        "precip": 3.0
+      },
+      "安徽省": {
+        "city": "合肥",
+        "temp_max": 28,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "福建省": {
+        "city": "福州",
+        "temp_max": 28,
+        "temp_min": 23,
+        "precip": 3.0
+      },
+      "江西省": {
+        "city": "南昌",
+        "temp_max": 27,
+        "temp_min": 23,
+        "precip": 12.5
+      },
+      "山东省": {
+        "city": "济南",
+        "temp_max": 35,
+        "temp_min": 24,
+        "precip": 5.0
+      },
+      "河南省": {
+        "city": "郑州",
+        "temp_max": 35,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "湖北省": {
+        "city": "武汉",
+        "temp_max": 30,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "湖南省": {
+        "city": "长沙",
+        "temp_max": 25,
+        "temp_min": 22,
+        "precip": 12.5
+      },
+      "广东省": {
+        "city": "广州",
+        "temp_max": 29,
+        "temp_min": 25,
+        "precip": 12.5
+      },
+      "广西壮族自治区": {
+        "city": "南宁",
+        "temp_max": 32,
+        "temp_min": 24,
+        "precip": 12.5
+      },
+      "海南省": {
+        "city": "海口",
+        "temp_max": 32,
+        "temp_min": 26,
+        "precip": 3.0
+      },
+      "重庆市": {
+        "city": "重庆",
+        "temp_max": 30,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "四川省": {
+        "city": "成都",
+        "temp_max": 29,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "贵州省": {
+        "city": "贵阳",
+        "temp_max": 24,
+        "temp_min": 17,
+        "precip": 5.0
+      },
+      "云南省": {
+        "city": "昆明",
+        "temp_max": 23,
+        "temp_min": 16,
+        "precip": 12.5
+      },
+      "西藏自治区": {
+        "city": "拉萨",
+        "temp_max": 24,
+        "temp_min": 10,
+        "precip": 0.0
+      },
+      "陕西省": {
+        "city": "西安",
+        "temp_max": 37,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "甘肃省": {
+        "city": "兰州",
+        "temp_max": 30,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "青海省": {
+        "city": "西宁",
+        "temp_max": 25,
+        "temp_min": 10,
+        "precip": 0.0
+      },
+      "宁夏回族自治区": {
+        "city": "银川",
+        "temp_max": 32,
+        "temp_min": 14,
+        "precip": 0.0
+      },
+      "新疆维吾尔自治区": {
+        "city": "乌鲁木齐",
+        "temp_max": 29,
+        "temp_min": 21,
+        "precip": 3.0
+      },
+      "台湾省": {
+        "city": "台北",
+        "temp_max": 27,
+        "temp_min": 23,
+        "precip": 3.0
+      },
+      "澳门特别行政区": {
+        "city": "澳门",
+        "temp_max": 29,
+        "temp_min": 26,
+        "precip": 25.0
+      },
+      "香港特别行政区": {
+        "city": "香港",
+        "temp_max": 32,
+        "temp_min": 27,
+        "precip": 0.0
+      }
+    },
+    "2026-06-14": {
+      "北京市": {
+        "city": "北京",
+        "temp_max": 26,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "天津市": {
+        "city": "天津",
+        "temp_max": 27,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "河北省": {
+        "city": "石家庄",
+        "temp_max": 33,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "山西省": {
+        "city": "太原",
+        "temp_max": 34,
+        "temp_min": 16,
+        "precip": 0.0
+      },
+      "内蒙古自治区": {
+        "city": "呼和浩特",
+        "temp_max": 29,
+        "temp_min": 14,
+        "precip": 0.0
+      },
+      "辽宁省": {
+        "city": "沈阳",
+        "temp_max": 22,
+        "temp_min": 15,
+        "precip": 12.5
+      },
+      "吉林省": {
+        "city": "长春",
+        "temp_max": 21,
+        "temp_min": 14,
+        "precip": 12.5
+      },
+      "黑龙江省": {
+        "city": "哈尔滨",
+        "temp_max": 20,
+        "temp_min": 11,
+        "precip": 0.0
+      },
+      "上海市": {
+        "city": "上海",
+        "temp_max": 30,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "江苏省": {
+        "city": "南京",
+        "temp_max": 33,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "浙江省": {
+        "city": "杭州",
+        "temp_max": 30,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "安徽省": {
+        "city": "合肥",
+        "temp_max": 31,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "福建省": {
+        "city": "福州",
+        "temp_max": 28,
+        "temp_min": 24,
+        "precip": 50.0
+      },
+      "江西省": {
+        "city": "南昌",
+        "temp_max": 28,
+        "temp_min": 24,
+        "precip": 3.0
+      },
+      "山东省": {
+        "city": "济南",
+        "temp_max": 33,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "河南省": {
+        "city": "郑州",
+        "temp_max": 36,
+        "temp_min": 24,
+        "precip": 0.0
+      },
+      "湖北省": {
+        "city": "武汉",
+        "temp_max": 31,
+        "temp_min": 24,
+        "precip": 0.0
+      },
+      "湖南省": {
+        "city": "长沙",
+        "temp_max": 31,
+        "temp_min": 25,
+        "precip": 3.0
+      },
+      "广东省": {
+        "city": "广州",
+        "temp_max": 29,
+        "temp_min": 24,
+        "precip": 25.0
+      },
+      "广西壮族自治区": {
+        "city": "南宁",
+        "temp_max": 29,
+        "temp_min": 24,
+        "precip": 12.5
+      },
+      "海南省": {
+        "city": "海口",
+        "temp_max": 31,
+        "temp_min": 27,
+        "precip": 0.0
+      },
+      "重庆市": {
+        "city": "重庆",
+        "temp_max": 32,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "四川省": {
+        "city": "成都",
+        "temp_max": 31,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "贵州省": {
+        "city": "贵阳",
+        "temp_max": 29,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "云南省": {
+        "city": "昆明",
+        "temp_max": 24,
+        "temp_min": 16,
+        "precip": 3.0
+      },
+      "西藏自治区": {
+        "city": "拉萨",
+        "temp_max": 25,
+        "temp_min": 11,
+        "precip": 0.0
+      },
+      "陕西省": {
+        "city": "西安",
+        "temp_max": 36,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "甘肃省": {
+        "city": "兰州",
+        "temp_max": 30,
+        "temp_min": 16,
+        "precip": 0.0
+      },
+      "青海省": {
+        "city": "西宁",
+        "temp_max": 25,
+        "temp_min": 11,
+        "precip": 0.0
+      },
+      "宁夏回族自治区": {
+        "city": "银川",
+        "temp_max": 32,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "新疆维吾尔自治区": {
+        "city": "乌鲁木齐",
+        "temp_max": 32,
+        "temp_min": 22,
+        "precip": 3.0
+      },
+      "台湾省": {
+        "city": "台北",
+        "temp_max": 28,
+        "temp_min": 23,
+        "precip": 3.0
+      },
+      "澳门特别行政区": {
+        "city": "澳门",
+        "temp_max": 29,
+        "temp_min": 25,
+        "precip": 25.0
+      },
+      "香港特别行政区": {
+        "city": "香港",
+        "temp_max": 33,
+        "temp_min": 28,
+        "precip": 8.0
+      }
+    },
+    "2026-06-15": {
+      "北京市": {
+        "city": "北京",
+        "temp_max": 26,
+        "temp_min": 16,
+        "precip": 5.0
+      },
+      "天津市": {
+        "city": "天津",
+        "temp_max": 28,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "河北省": {
+        "city": "石家庄",
+        "temp_max": 29,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "山西省": {
+        "city": "太原",
+        "temp_max": 29,
+        "temp_min": 16,
+        "precip": 0.0
+      },
+      "内蒙古自治区": {
+        "city": "呼和浩特",
+        "temp_max": 31,
+        "temp_min": 16,
+        "precip": 0.0
+      },
+      "辽宁省": {
+        "city": "沈阳",
+        "temp_max": 24,
+        "temp_min": 16,
+        "precip": 5.0
+      },
+      "吉林省": {
+        "city": "长春",
+        "temp_max": 25,
+        "temp_min": 15,
+        "precip": 0.0
+      },
+      "黑龙江省": {
+        "city": "哈尔滨",
+        "temp_max": 24,
+        "temp_min": 12,
+        "precip": 0.0
+      },
+      "上海市": {
+        "city": "上海",
+        "temp_max": 30,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "江苏省": {
+        "city": "南京",
+        "temp_max": 34,
+        "temp_min": 24,
+        "precip": 3.0
+      },
+      "浙江省": {
+        "city": "杭州",
+        "temp_max": 32,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "安徽省": {
+        "city": "合肥",
+        "temp_max": 32,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "福建省": {
+        "city": "福州",
+        "temp_max": 28,
+        "temp_min": 23,
+        "precip": 3.0
+      },
+      "江西省": {
+        "city": "南昌",
+        "temp_max": 31,
+        "temp_min": 22,
+        "precip": 3.0
+      },
+      "山东省": {
+        "city": "济南",
+        "temp_max": 31,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "河南省": {
+        "city": "郑州",
+        "temp_max": 34,
+        "temp_min": 24,
+        "precip": 0.0
+      },
+      "湖北省": {
+        "city": "武汉",
+        "temp_max": 33,
+        "temp_min": 25,
+        "precip": 0.0
+      },
+      "湖南省": {
+        "city": "长沙",
+        "temp_max": 32,
+        "temp_min": 26,
+        "precip": 3.0
+      },
+      "广东省": {
+        "city": "广州",
+        "temp_max": 28,
+        "temp_min": 24,
+        "precip": 25.0
+      },
+      "广西壮族自治区": {
+        "city": "南宁",
+        "temp_max": 30,
+        "temp_min": 24,
+        "precip": 5.0
+      },
+      "海南省": {
+        "city": "海口",
+        "temp_max": 34,
+        "temp_min": 27,
+        "precip": 0.0
+      },
+      "重庆市": {
+        "city": "重庆",
+        "temp_max": 34,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "四川省": {
+        "city": "成都",
+        "temp_max": 30,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "贵州省": {
+        "city": "贵阳",
+        "temp_max": 30,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "云南省": {
+        "city": "昆明",
+        "temp_max": 23,
+        "temp_min": 17,
+        "precip": 3.0
+      },
+      "西藏自治区": {
+        "city": "拉萨",
+        "temp_max": 25,
+        "temp_min": 12,
+        "precip": 0.0
+      },
+      "陕西省": {
+        "city": "西安",
+        "temp_max": 38,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "甘肃省": {
+        "city": "兰州",
+        "temp_max": 30,
+        "temp_min": 17,
+        "precip": 0.0
+      },
+      "青海省": {
+        "city": "西宁",
+        "temp_max": 26,
+        "temp_min": 10,
+        "precip": 0.0
+      },
+      "宁夏回族自治区": {
+        "city": "银川",
+        "temp_max": 33,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "新疆维吾尔自治区": {
+        "city": "乌鲁木齐",
+        "temp_max": 34,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "台湾省": {
+        "city": "台北",
+        "temp_max": 27,
+        "temp_min": 23,
+        "precip": 25.0
+      },
+      "澳门特别行政区": {
+        "city": "澳门",
+        "temp_max": 29,
+        "temp_min": 25,
+        "precip": 12.5
+      },
+      "香港特别行政区": {
+        "city": "香港",
+        "temp_max": 29,
+        "temp_min": 24,
+        "precip": 2.0
+      }
+    },
+    "2026-06-16": {
+      "北京市": {
+        "city": "北京",
+        "temp_max": 25,
+        "temp_min": 17,
+        "precip": 0.0
+      },
+      "天津市": {
+        "city": "天津",
+        "temp_max": 28,
+        "temp_min": 20,
+        "precip": 5.0
+      },
+      "河北省": {
+        "city": "石家庄",
+        "temp_max": 29,
+        "temp_min": 21,
+        "precip": 5.0
+      },
+      "山西省": {
+        "city": "太原",
+        "temp_max": 28,
+        "temp_min": 17,
+        "precip": 3.0
+      },
+      "内蒙古自治区": {
+        "city": "呼和浩特",
+        "temp_max": 30,
+        "temp_min": 17,
+        "precip": 2.0
+      },
+      "辽宁省": {
+        "city": "沈阳",
+        "temp_max": 26,
+        "temp_min": 16,
+        "precip": 5.0
+      },
+      "吉林省": {
+        "city": "长春",
+        "temp_max": 25,
+        "temp_min": 14,
+        "precip": 2.0
+      },
+      "黑龙江省": {
+        "city": "哈尔滨",
+        "temp_max": 26,
+        "temp_min": 15,
+        "precip": 0.0
+      },
+      "上海市": {
+        "city": "上海",
+        "temp_max": 30,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "江苏省": {
+        "city": "南京",
+        "temp_max": 32,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "浙江省": {
+        "city": "杭州",
+        "temp_max": 31,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "安徽省": {
+        "city": "合肥",
+        "temp_max": 32,
+        "temp_min": 24,
+        "precip": 0.0
+      },
+      "福建省": {
+        "city": "福州",
+        "temp_max": 28,
+        "temp_min": 24,
+        "precip": 3.0
+      },
+      "江西省": {
+        "city": "南昌",
+        "temp_max": 31,
+        "temp_min": 24,
+        "precip": 12.5
+      },
+      "山东省": {
+        "city": "济南",
+        "temp_max": 32,
+        "temp_min": 20,
+        "precip": 5.0
+      },
+      "河南省": {
+        "city": "郑州",
+        "temp_max": 34,
+        "temp_min": 24,
+        "precip": 3.0
+      },
+      "湖北省": {
+        "city": "武汉",
+        "temp_max": 34,
+        "temp_min": 25,
+        "precip": 0.0
+      },
+      "湖南省": {
+        "city": "长沙",
+        "temp_max": 33,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "广东省": {
+        "city": "广州",
+        "temp_max": 29,
+        "temp_min": 25,
+        "precip": 12.5
+      },
+      "广西壮族自治区": {
+        "city": "南宁",
+        "temp_max": 30,
+        "temp_min": 24,
+        "precip": 5.0
+      },
+      "海南省": {
+        "city": "海口",
+        "temp_max": 35,
+        "temp_min": 27,
+        "precip": 0.0
+      },
+      "重庆市": {
+        "city": "重庆",
+        "temp_max": 33,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "四川省": {
+        "city": "成都",
+        "temp_max": 29,
+        "temp_min": 22,
+        "precip": 2.0
+      },
+      "贵州省": {
+        "city": "贵阳",
+        "temp_max": 27,
+        "temp_min": 19,
+        "precip": 5.0
+      },
+      "云南省": {
+        "city": "昆明",
+        "temp_max": 25,
+        "temp_min": 17,
+        "precip": 3.0
+      },
+      "西藏自治区": {
+        "city": "拉萨",
+        "temp_max": 26,
+        "temp_min": 12,
+        "precip": 0.0
+      },
+      "陕西省": {
+        "city": "西安",
+        "temp_max": 32,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "甘肃省": {
+        "city": "兰州",
+        "temp_max": 29,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "青海省": {
+        "city": "西宁",
+        "temp_max": 22,
+        "temp_min": 11,
+        "precip": 3.0
+      },
+      "宁夏回族自治区": {
+        "city": "银川",
+        "temp_max": 31,
+        "temp_min": 19,
+        "precip": 2.0
+      },
+      "新疆维吾尔自治区": {
+        "city": "乌鲁木齐",
+        "temp_max": 35,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "台湾省": {
+        "city": "台北",
+        "temp_max": 28,
+        "temp_min": 23,
+        "precip": 12.5
+      },
+      "澳门特别行政区": {
+        "city": "澳门",
+        "temp_max": 28,
+        "temp_min": 26,
+        "precip": 12.5
+      },
+      "香港特别行政区": {
+        "city": "香港",
+        "temp_max": 30,
+        "temp_min": 25,
+        "precip": 0.0
+      }
+    },
+    "2026-06-17": {
+      "北京市": {
+        "city": "北京",
+        "temp_max": 29,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "天津市": {
+        "city": "天津",
+        "temp_max": 30,
+        "temp_min": 21,
+        "precip": 2.0
+      },
+      "河北省": {
+        "city": "石家庄",
+        "temp_max": 33,
+        "temp_min": 22,
+        "precip": 2.0
+      },
+      "山西省": {
+        "city": "太原",
+        "temp_max": 29,
+        "temp_min": 18,
+        "precip": 2.0
+      },
+      "内蒙古自治区": {
+        "city": "呼和浩特",
+        "temp_max": 30,
+        "temp_min": 17,
+        "precip": 2.0
+      },
+      "辽宁省": {
+        "city": "沈阳",
+        "temp_max": 26,
+        "temp_min": 17,
+        "precip": 2.0
+      },
+      "吉林省": {
+        "city": "长春",
+        "temp_max": 27,
+        "temp_min": 16,
+        "precip": 2.0
+      },
+      "黑龙江省": {
+        "city": "哈尔滨",
+        "temp_max": 28,
+        "temp_min": 17,
+        "precip": 2.0
+      },
+      "上海市": {
+        "city": "上海",
+        "temp_max": 30,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "江苏省": {
+        "city": "南京",
+        "temp_max": 33,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "浙江省": {
+        "city": "杭州",
+        "temp_max": 33,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "安徽省": {
+        "city": "合肥",
+        "temp_max": 31,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "福建省": {
+        "city": "福州",
+        "temp_max": 29,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "江西省": {
+        "city": "南昌",
+        "temp_max": 31,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "山东省": {
+        "city": "济南",
+        "temp_max": 31,
+        "temp_min": 20,
+        "precip": 2.0
+      },
+      "河南省": {
+        "city": "郑州",
+        "temp_max": 33,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "湖北省": {
+        "city": "武汉",
+        "temp_max": 30,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "湖南省": {
+        "city": "长沙",
+        "temp_max": 32,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "广东省": {
+        "city": "广州",
+        "temp_max": 29,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "广西壮族自治区": {
+        "city": "南宁",
+        "temp_max": 28,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "海南省": {
+        "city": "海口",
+        "temp_max": 34,
+        "temp_min": 27,
+        "precip": 2.0
+      },
+      "重庆市": {
+        "city": "重庆",
+        "temp_max": 27,
+        "temp_min": 22,
+        "precip": 2.0
+      },
+      "四川省": {
+        "city": "成都",
+        "temp_max": 28,
+        "temp_min": 21,
+        "precip": 2.0
+      },
+      "贵州省": {
+        "city": "贵阳",
+        "temp_max": 25,
+        "temp_min": 19,
+        "precip": 2.0
+      },
+      "云南省": {
+        "city": "昆明",
+        "temp_max": 25,
+        "temp_min": 17,
+        "precip": 2.0
+      },
+      "西藏自治区": {
+        "city": "拉萨",
+        "temp_max": 25,
+        "temp_min": 12,
+        "precip": 2.0
+      },
+      "陕西省": {
+        "city": "西安",
+        "temp_max": 33,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "甘肃省": {
+        "city": "兰州",
+        "temp_max": 32,
+        "temp_min": 18,
+        "precip": 2.0
+      },
+      "青海省": {
+        "city": "西宁",
+        "temp_max": 24,
+        "temp_min": 11,
+        "precip": 2.0
+      },
+      "宁夏回族自治区": {
+        "city": "银川",
+        "temp_max": 30,
+        "temp_min": 19,
+        "precip": 2.0
+      },
+      "新疆维吾尔自治区": {
+        "city": "乌鲁木齐",
+        "temp_max": 33,
+        "temp_min": 21,
+        "precip": 2.0
+      },
+      "台湾省": {
+        "city": "台北",
+        "temp_max": 29,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "澳门特别行政区": {
+        "city": "澳门",
+        "temp_max": 29,
+        "temp_min": 28,
+        "precip": 2.0
+      },
+      "香港特别行政区": {
+        "city": "香港",
+        "temp_max": 31,
+        "temp_min": 26,
+        "precip": 0.0
+      }
+    },
+    "2026-06-18": {
+      "北京市": {
+        "city": "北京",
+        "temp_max": 30,
+        "temp_min": 20,
+        "precip": 2.0
+      },
+      "天津市": {
+        "city": "天津",
+        "temp_max": 31,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "河北省": {
+        "city": "石家庄",
+        "temp_max": 33,
+        "temp_min": 21,
+        "precip": 2.0
+      },
+      "山西省": {
+        "city": "太原",
+        "temp_max": 28,
+        "temp_min": 17,
+        "precip": 0.0
+      },
+      "内蒙古自治区": {
+        "city": "呼和浩特",
+        "temp_max": 31,
+        "temp_min": 18,
+        "precip": 2.0
+      },
+      "辽宁省": {
+        "city": "沈阳",
+        "temp_max": 26,
+        "temp_min": 17,
+        "precip": 2.0
+      },
+      "吉林省": {
+        "city": "长春",
+        "temp_max": 26,
+        "temp_min": 17,
+        "precip": 0.0
+      },
+      "黑龙江省": {
+        "city": "哈尔滨",
+        "temp_max": 26,
+        "temp_min": 16,
+        "precip": 2.0
+      },
+      "上海市": {
+        "city": "上海",
+        "temp_max": 29,
+        "temp_min": 22,
+        "precip": 2.0
+      },
+      "江苏省": {
+        "city": "南京",
+        "temp_max": 33,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "浙江省": {
+        "city": "杭州",
+        "temp_max": 27,
+        "temp_min": 22,
+        "precip": 2.0
+      },
+      "安徽省": {
+        "city": "合肥",
+        "temp_max": 29,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "福建省": {
+        "city": "福州",
+        "temp_max": 30,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "江西省": {
+        "city": "南昌",
+        "temp_max": 29,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "山东省": {
+        "city": "济南",
+        "temp_max": 32,
+        "temp_min": 21,
+        "precip": 2.0
+      },
+      "河南省": {
+        "city": "郑州",
+        "temp_max": 32,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "湖北省": {
+        "city": "武汉",
+        "temp_max": 29,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "湖南省": {
+        "city": "长沙",
+        "temp_max": 30,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "广东省": {
+        "city": "广州",
+        "temp_max": 27,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "广西壮族自治区": {
+        "city": "南宁",
+        "temp_max": 28,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "海南省": {
+        "city": "海口",
+        "temp_max": 34,
+        "temp_min": 28,
+        "precip": 2.0
+      },
+      "重庆市": {
+        "city": "重庆",
+        "temp_max": 30,
+        "temp_min": 22,
+        "precip": 2.0
+      },
+      "四川省": {
+        "city": "成都",
+        "temp_max": 32,
+        "temp_min": 22,
+        "precip": 2.0
+      },
+      "贵州省": {
+        "city": "贵阳",
+        "temp_max": 24,
+        "temp_min": 19,
+        "precip": 2.0
+      },
+      "云南省": {
+        "city": "昆明",
+        "temp_max": 25,
+        "temp_min": 17,
+        "precip": 0.0
+      },
+      "西藏自治区": {
+        "city": "拉萨",
+        "temp_max": 23,
+        "temp_min": 11,
+        "precip": 2.0
+      },
+      "陕西省": {
+        "city": "西安",
+        "temp_max": 34,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "甘肃省": {
+        "city": "兰州",
+        "temp_max": 32,
+        "temp_min": 19,
+        "precip": 2.0
+      },
+      "青海省": {
+        "city": "西宁",
+        "temp_max": 25,
+        "temp_min": 10,
+        "precip": 0.0
+      },
+      "宁夏回族自治区": {
+        "city": "银川",
+        "temp_max": 31,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "新疆维吾尔自治区": {
+        "city": "乌鲁木齐",
+        "temp_max": 29,
+        "temp_min": 19,
+        "precip": 2.0
+      },
+      "台湾省": {
+        "city": "台北",
+        "temp_max": 32,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "澳门特别行政区": {
+        "city": "澳门",
+        "temp_max": 30,
+        "temp_min": 28,
+        "precip": 2.0
+      },
+      "香港特别行政区": {
+        "city": "香港",
+        "temp_max": 32,
+        "temp_min": 27,
+        "precip": 8.0
+      }
+    },
+    "2026-06-19": {
+      "北京市": {
+        "city": "北京",
+        "temp_max": 35,
+        "temp_min": 19,
+        "precip": 2.0
+      },
+      "天津市": {
+        "city": "天津",
+        "temp_max": 36,
+        "temp_min": 20,
+        "precip": 2.0
+      },
+      "河北省": {
+        "city": "石家庄",
+        "temp_max": 37,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "山西省": {
+        "city": "太原",
+        "temp_max": 31,
+        "temp_min": 17,
+        "precip": 2.0
+      },
+      "内蒙古自治区": {
+        "city": "呼和浩特",
+        "temp_max": 33,
+        "temp_min": 18,
+        "precip": 2.0
+      },
+      "辽宁省": {
+        "city": "沈阳",
+        "temp_max": 30,
+        "temp_min": 17,
+        "precip": 2.0
+      },
+      "吉林省": {
+        "city": "长春",
+        "temp_max": 28,
+        "temp_min": 17,
+        "precip": 2.0
+      },
+      "黑龙江省": {
+        "city": "哈尔滨",
+        "temp_max": 26,
+        "temp_min": 17,
+        "precip": 2.0
+      },
+      "上海市": {
+        "city": "上海",
+        "temp_max": 27,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "江苏省": {
+        "city": "南京",
+        "temp_max": 33,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "浙江省": {
+        "city": "杭州",
+        "temp_max": 27,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "安徽省": {
+        "city": "合肥",
+        "temp_max": 29,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "福建省": {
+        "city": "福州",
+        "temp_max": 34,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "江西省": {
+        "city": "南昌",
+        "temp_max": 29,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "山东省": {
+        "city": "济南",
+        "temp_max": 31,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "河南省": {
+        "city": "郑州",
+        "temp_max": 29,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "湖北省": {
+        "city": "武汉",
+        "temp_max": 25,
+        "temp_min": 21,
+        "precip": 2.0
+      },
+      "湖南省": {
+        "city": "长沙",
+        "temp_max": 30,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "广东省": {
+        "city": "广州",
+        "temp_max": 30,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "广西壮族自治区": {
+        "city": "南宁",
+        "temp_max": 28,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "海南省": {
+        "city": "海口",
+        "temp_max": 35,
+        "temp_min": 27,
+        "precip": 2.0
+      },
+      "重庆市": {
+        "city": "重庆",
+        "temp_max": 25,
+        "temp_min": 22,
+        "precip": 2.0
+      },
+      "四川省": {
+        "city": "成都",
+        "temp_max": 25,
+        "temp_min": 21,
+        "precip": 2.0
+      },
+      "贵州省": {
+        "city": "贵阳",
+        "temp_max": 27,
+        "temp_min": 20,
+        "precip": 2.0
+      },
+      "云南省": {
+        "city": "昆明",
+        "temp_max": 25,
+        "temp_min": 18,
+        "precip": 2.0
+      },
+      "西藏自治区": {
+        "city": "拉萨",
+        "temp_max": 23,
+        "temp_min": 9,
+        "precip": 2.0
+      },
+      "陕西省": {
+        "city": "西安",
+        "temp_max": 31,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "甘肃省": {
+        "city": "兰州",
+        "temp_max": 33,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "青海省": {
+        "city": "西宁",
+        "temp_max": 28,
+        "temp_min": 10,
+        "precip": 2.0
+      },
+      "宁夏回族自治区": {
+        "city": "银川",
+        "temp_max": 31,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "新疆维吾尔自治区": {
+        "city": "乌鲁木齐",
+        "temp_max": 21,
+        "temp_min": 14,
+        "precip": 2.0
+      },
+      "台湾省": {
+        "city": "台北",
+        "temp_max": 35,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "澳门特别行政区": {
+        "city": "澳门",
+        "temp_max": 30,
+        "temp_min": 28,
+        "precip": 2.0
+      },
+      "香港特别行政区": {
+        "city": "香港",
+        "temp_max": 33,
+        "temp_min": 28,
+        "precip": 2.0
+      }
+    },
+    "2026-06-20": {
+      "北京市": {
+        "city": "北京",
+        "temp_max": 30,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "天津市": {
+        "city": "天津",
+        "temp_max": 33,
+        "temp_min": 25,
+        "precip": 0.0
+      },
+      "河北省": {
+        "city": "石家庄",
+        "temp_max": 34,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "山西省": {
+        "city": "太原",
+        "temp_max": 34,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "内蒙古自治区": {
+        "city": "呼和浩特",
+        "temp_max": 32,
+        "temp_min": 20,
+        "precip": 2.0
+      },
+      "辽宁省": {
+        "city": "沈阳",
+        "temp_max": 25,
+        "temp_min": 18,
+        "precip": 2.0
+      },
+      "吉林省": {
+        "city": "长春",
+        "temp_max": 21,
+        "temp_min": 19,
+        "precip": 2.0
+      },
+      "黑龙江省": {
+        "city": "哈尔滨",
+        "temp_max": 26,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "上海市": {
+        "city": "上海",
+        "temp_max": 28,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "江苏省": {
+        "city": "南京",
+        "temp_max": 29,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "浙江省": {
+        "city": "杭州",
+        "temp_max": 29,
+        "temp_min": 26,
+        "precip": 2.0
+      },
+      "安徽省": {
+        "city": "合肥",
+        "temp_max": 32,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "福建省": {
+        "city": "福州",
+        "temp_max": 33,
+        "temp_min": 26,
+        "precip": 2.0
+      },
+      "江西省": {
+        "city": "南昌",
+        "temp_max": 26,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "山东省": {
+        "city": "济南",
+        "temp_max": 33,
+        "temp_min": 24,
+        "precip": 0.0
+      },
+      "河南省": {
+        "city": "郑州",
+        "temp_max": 32,
+        "temp_min": 25,
+        "precip": 0.0
+      },
+      "湖北省": {
+        "city": "武汉",
+        "temp_max": 28,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "湖南省": {
+        "city": "长沙",
+        "temp_max": 26,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "广东省": {
+        "city": "广州",
+        "temp_max": 33,
+        "temp_min": 26,
+        "precip": 2.0
+      },
+      "广西壮族自治区": {
+        "city": "南宁",
+        "temp_max": 31,
+        "temp_min": 26,
+        "precip": 2.0
+      },
+      "海南省": {
+        "city": "海口",
+        "temp_max": 36,
+        "temp_min": 28,
+        "precip": 2.0
+      },
+      "重庆市": {
+        "city": "重庆",
+        "temp_max": 30,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "四川省": {
+        "city": "成都",
+        "temp_max": 30,
+        "temp_min": 22,
+        "precip": 2.0
+      },
+      "贵州省": {
+        "city": "贵阳",
+        "temp_max": 24,
+        "temp_min": 21,
+        "precip": 2.0
+      },
+      "云南省": {
+        "city": "昆明",
+        "temp_max": 24,
+        "temp_min": 18,
+        "precip": 2.0
+      },
+      "西藏自治区": {
+        "city": "拉萨",
+        "temp_max": 22,
+        "temp_min": 9,
+        "precip": 2.0
+      },
+      "陕西省": {
+        "city": "西安",
+        "temp_max": 34,
+        "temp_min": 24,
+        "precip": 0.0
+      },
+      "甘肃省": {
+        "city": "兰州",
+        "temp_max": 29,
+        "temp_min": 18,
+        "precip": 0.0
+      },
+      "青海省": {
+        "city": "西宁",
+        "temp_max": 23,
+        "temp_min": 10,
+        "precip": 2.0
+      },
+      "宁夏回族自治区": {
+        "city": "银川",
+        "temp_max": 33,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "新疆维吾尔自治区": {
+        "city": "乌鲁木齐",
+        "temp_max": 26,
+        "temp_min": 16,
+        "precip": 2.0
+      },
+      "台湾省": {
+        "city": "台北",
+        "temp_max": 34,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "澳门特别行政区": {
+        "city": "澳门",
+        "temp_max": 31,
+        "temp_min": 29,
+        "precip": 2.0
+      },
+      "香港特别行政区": {
+        "city": "香港",
+        "temp_max": 29,
+        "temp_min": 24,
+        "precip": 0.0
+      }
+    },
+    "2026-06-21": {
+      "北京市": {
+        "city": "北京",
+        "temp_max": 30,
+        "temp_min": 21,
+        "precip": 2.0
+      },
+      "天津市": {
+        "city": "天津",
+        "temp_max": 32,
+        "temp_min": 27,
+        "precip": 2.0
+      },
+      "河北省": {
+        "city": "石家庄",
+        "temp_max": 32,
+        "temp_min": 27,
+        "precip": 2.0
+      },
+      "山西省": {
+        "city": "太原",
+        "temp_max": 32,
+        "temp_min": 19,
+        "precip": 2.0
+      },
+      "内蒙古自治区": {
+        "city": "呼和浩特",
+        "temp_max": 30,
+        "temp_min": 15,
+        "precip": 2.0
+      },
+      "辽宁省": {
+        "city": "沈阳",
+        "temp_max": 28,
+        "temp_min": 20,
+        "precip": 2.0
+      },
+      "吉林省": {
+        "city": "长春",
+        "temp_max": 26,
+        "temp_min": 20,
+        "precip": 0.0
+      },
+      "黑龙江省": {
+        "city": "哈尔滨",
+        "temp_max": 29,
+        "temp_min": 21,
+        "precip": 2.0
+      },
+      "上海市": {
+        "city": "上海",
+        "temp_max": 30,
+        "temp_min": 26,
+        "precip": 2.0
+      },
+      "江苏省": {
+        "city": "南京",
+        "temp_max": 32,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "浙江省": {
+        "city": "杭州",
+        "temp_max": 32,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "安徽省": {
+        "city": "合肥",
+        "temp_max": 32,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "福建省": {
+        "city": "福州",
+        "temp_max": 30,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "江西省": {
+        "city": "南昌",
+        "temp_max": 28,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "山东省": {
+        "city": "济南",
+        "temp_max": 32,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "河南省": {
+        "city": "郑州",
+        "temp_max": 32,
+        "temp_min": 26,
+        "precip": 2.0
+      },
+      "湖北省": {
+        "city": "武汉",
+        "temp_max": 30,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "湖南省": {
+        "city": "长沙",
+        "temp_max": 26,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "广东省": {
+        "city": "广州",
+        "temp_max": 30,
+        "temp_min": 26,
+        "precip": 2.0
+      },
+      "广西壮族自治区": {
+        "city": "南宁",
+        "temp_max": 31,
+        "temp_min": 26,
+        "precip": 2.0
+      },
+      "海南省": {
+        "city": "海口",
+        "temp_max": 37,
+        "temp_min": 28,
+        "precip": 2.0
+      },
+      "重庆市": {
+        "city": "重庆",
+        "temp_max": 32,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "四川省": {
+        "city": "成都",
+        "temp_max": 33,
+        "temp_min": 22,
+        "precip": 2.0
+      },
+      "贵州省": {
+        "city": "贵阳",
+        "temp_max": 26,
+        "temp_min": 21,
+        "precip": 2.0
+      },
+      "云南省": {
+        "city": "昆明",
+        "temp_max": 25,
+        "temp_min": 18,
+        "precip": 2.0
+      },
+      "西藏自治区": {
+        "city": "拉萨",
+        "temp_max": 18,
+        "temp_min": 8,
+        "precip": 2.0
+      },
+      "陕西省": {
+        "city": "西安",
+        "temp_max": 31,
+        "temp_min": 25,
+        "precip": 0.0
+      },
+      "甘肃省": {
+        "city": "兰州",
+        "temp_max": 26,
+        "temp_min": 14,
+        "precip": 2.0
+      },
+      "青海省": {
+        "city": "西宁",
+        "temp_max": 22,
+        "temp_min": 9,
+        "precip": 2.0
+      },
+      "宁夏回族自治区": {
+        "city": "银川",
+        "temp_max": 28,
+        "temp_min": 17,
+        "precip": 2.0
+      },
+      "新疆维吾尔自治区": {
+        "city": "乌鲁木齐",
+        "temp_max": 25,
+        "temp_min": 17,
+        "precip": 2.0
+      },
+      "台湾省": {
+        "city": "台北",
+        "temp_max": 34,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "澳门特别行政区": {
+        "city": "澳门",
+        "temp_max": 31,
+        "temp_min": 29,
+        "precip": 2.0
+      },
+      "香港特别行政区": {
+        "city": "香港",
+        "temp_max": 30,
+        "temp_min": 25,
+        "precip": 0.0
+      }
+    },
+    "2026-06-22": {
+      "北京市": {
+        "city": "北京",
+        "temp_max": 25,
+        "temp_min": 19,
+        "precip": 2.0
+      },
+      "天津市": {
+        "city": "天津",
+        "temp_max": 32,
+        "temp_min": 20,
+        "precip": 2.0
+      },
+      "河北省": {
+        "city": "石家庄",
+        "temp_max": 35,
+        "temp_min": 21,
+        "precip": 2.0
+      },
+      "山西省": {
+        "city": "太原",
+        "temp_max": 31,
+        "temp_min": 16,
+        "precip": 2.0
+      },
+      "内蒙古自治区": {
+        "city": "呼和浩特",
+        "temp_max": 24,
+        "temp_min": 11,
+        "precip": 2.0
+      },
+      "辽宁省": {
+        "city": "沈阳",
+        "temp_max": 26,
+        "temp_min": 17,
+        "precip": 2.0
+      },
+      "吉林省": {
+        "city": "长春",
+        "temp_max": 28,
+        "temp_min": 16,
+        "precip": 2.0
+      },
+      "黑龙江省": {
+        "city": "哈尔滨",
+        "temp_max": 31,
+        "temp_min": 16,
+        "precip": 2.0
+      },
+      "上海市": {
+        "city": "上海",
+        "temp_max": 29,
+        "temp_min": 24,
+        "precip": 0.0
+      },
+      "江苏省": {
+        "city": "南京",
+        "temp_max": 29,
+        "temp_min": 23,
+        "precip": 0.0
+      },
+      "浙江省": {
+        "city": "杭州",
+        "temp_max": 27,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "安徽省": {
+        "city": "合肥",
+        "temp_max": 30,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "福建省": {
+        "city": "福州",
+        "temp_max": 29,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "江西省": {
+        "city": "南昌",
+        "temp_max": 27,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "山东省": {
+        "city": "济南",
+        "temp_max": 32,
+        "temp_min": 22,
+        "precip": 2.0
+      },
+      "河南省": {
+        "city": "郑州",
+        "temp_max": 34,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "湖北省": {
+        "city": "武汉",
+        "temp_max": 29,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "湖南省": {
+        "city": "长沙",
+        "temp_max": 28,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "广东省": {
+        "city": "广州",
+        "temp_max": 31,
+        "temp_min": 26,
+        "precip": 2.0
+      },
+      "广西壮族自治区": {
+        "city": "南宁",
+        "temp_max": 31,
+        "temp_min": 26,
+        "precip": 2.0
+      },
+      "海南省": {
+        "city": "海口",
+        "temp_max": 38,
+        "temp_min": 28,
+        "precip": 2.0
+      },
+      "重庆市": {
+        "city": "重庆",
+        "temp_max": 27,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "四川省": {
+        "city": "成都",
+        "temp_max": 28,
+        "temp_min": 21,
+        "precip": 2.0
+      },
+      "贵州省": {
+        "city": "贵阳",
+        "temp_max": 26,
+        "temp_min": 20,
+        "precip": 2.0
+      },
+      "云南省": {
+        "city": "昆明",
+        "temp_max": 20,
+        "temp_min": 17,
+        "precip": 2.0
+      },
+      "西藏自治区": {
+        "city": "拉萨",
+        "temp_max": 17,
+        "temp_min": 10,
+        "precip": 2.0
+      },
+      "陕西省": {
+        "city": "西安",
+        "temp_max": 30,
+        "temp_min": 19,
+        "precip": 2.0
+      },
+      "甘肃省": {
+        "city": "兰州",
+        "temp_max": 20,
+        "temp_min": 11,
+        "precip": 2.0
+      },
+      "青海省": {
+        "city": "西宁",
+        "temp_max": 18,
+        "temp_min": 6,
+        "precip": 2.0
+      },
+      "宁夏回族自治区": {
+        "city": "银川",
+        "temp_max": 21,
+        "temp_min": 11,
+        "precip": 2.0
+      },
+      "新疆维吾尔自治区": {
+        "city": "乌鲁木齐",
+        "temp_max": 29,
+        "temp_min": 20,
+        "precip": 2.0
+      },
+      "台湾省": {
+        "city": "台北",
+        "temp_max": 29,
+        "temp_min": 22,
+        "precip": 2.0
+      },
+      "澳门特别行政区": {
+        "city": "澳门",
+        "temp_max": 31,
+        "temp_min": 29,
+        "precip": 2.0
+      },
+      "香港特别行政区": {
+        "city": "香港",
+        "temp_max": 31,
+        "temp_min": 26,
+        "precip": 8.0
+      }
+    },
+    "2026-06-23": {
+      "北京市": {
+        "city": "北京",
+        "temp_max": 23,
+        "temp_min": 19,
+        "precip": 2.0
+      },
+      "天津市": {
+        "city": "天津",
+        "temp_max": 21,
+        "temp_min": 17,
+        "precip": 2.0
+      },
+      "河北省": {
+        "city": "石家庄",
+        "temp_max": 26,
+        "temp_min": 20,
+        "precip": 2.0
+      },
+      "山西省": {
+        "city": "太原",
+        "temp_max": 25,
+        "temp_min": 14,
+        "precip": 0.0
+      },
+      "内蒙古自治区": {
+        "city": "呼和浩特",
+        "temp_max": 24,
+        "temp_min": 14,
+        "precip": 0.0
+      },
+      "辽宁省": {
+        "city": "沈阳",
+        "temp_max": 19,
+        "temp_min": 13,
+        "precip": 0.0
+      },
+      "吉林省": {
+        "city": "长春",
+        "temp_max": 18,
+        "temp_min": 13,
+        "precip": 2.0
+      },
+      "黑龙江省": {
+        "city": "哈尔滨",
+        "temp_max": 18,
+        "temp_min": 11,
+        "precip": 2.0
+      },
+      "上海市": {
+        "city": "上海",
+        "temp_max": 28,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "江苏省": {
+        "city": "南京",
+        "temp_max": 28,
+        "temp_min": 19,
+        "precip": 2.0
+      },
+      "浙江省": {
+        "city": "杭州",
+        "temp_max": 28,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "安徽省": {
+        "city": "合肥",
+        "temp_max": 29,
+        "temp_min": 18,
+        "precip": 2.0
+      },
+      "福建省": {
+        "city": "福州",
+        "temp_max": 31,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "江西省": {
+        "city": "南昌",
+        "temp_max": 27,
+        "temp_min": 24,
+        "precip": 2.0
+      },
+      "山东省": {
+        "city": "济南",
+        "temp_max": 23,
+        "temp_min": 20,
+        "precip": 2.0
+      },
+      "河南省": {
+        "city": "郑州",
+        "temp_max": 23,
+        "temp_min": 19,
+        "precip": 2.0
+      },
+      "湖北省": {
+        "city": "武汉",
+        "temp_max": 23,
+        "temp_min": 20,
+        "precip": 2.0
+      },
+      "湖南省": {
+        "city": "长沙",
+        "temp_max": 28,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "广东省": {
+        "city": "广州",
+        "temp_max": 31,
+        "temp_min": 26,
+        "precip": 2.0
+      },
+      "广西壮族自治区": {
+        "city": "南宁",
+        "temp_max": 32,
+        "temp_min": 25,
+        "precip": 2.0
+      },
+      "海南省": {
+        "city": "海口",
+        "temp_max": 38,
+        "temp_min": 26,
+        "precip": 0.0
+      },
+      "重庆市": {
+        "city": "重庆",
+        "temp_max": 30,
+        "temp_min": 22,
+        "precip": 0.0
+      },
+      "四川省": {
+        "city": "成都",
+        "temp_max": 31,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "贵州省": {
+        "city": "贵阳",
+        "temp_max": 21,
+        "temp_min": 19,
+        "precip": 2.0
+      },
+      "云南省": {
+        "city": "昆明",
+        "temp_max": 20,
+        "temp_min": 16,
+        "precip": 2.0
+      },
+      "西藏自治区": {
+        "city": "拉萨",
+        "temp_max": 21,
+        "temp_min": 7,
+        "precip": 2.0
+      },
+      "陕西省": {
+        "city": "西安",
+        "temp_max": 27,
+        "temp_min": 19,
+        "precip": 0.0
+      },
+      "甘肃省": {
+        "city": "兰州",
+        "temp_max": 24,
+        "temp_min": 16,
+        "precip": 0.0
+      },
+      "青海省": {
+        "city": "西宁",
+        "temp_max": 20,
+        "temp_min": 7,
+        "precip": 2.0
+      },
+      "宁夏回族自治区": {
+        "city": "银川",
+        "temp_max": 24,
+        "temp_min": 14,
+        "precip": 0.0
+      },
+      "新疆维吾尔自治区": {
+        "city": "乌鲁木齐",
+        "temp_max": 32,
+        "temp_min": 21,
+        "precip": 0.0
+      },
+      "台湾省": {
+        "city": "台北",
+        "temp_max": 28,
+        "temp_min": 23,
+        "precip": 2.0
+      },
+      "澳门特别行政区": {
+        "city": "澳门",
+        "temp_max": 31,
+        "temp_min": 29,
+        "precip": 2.0
+      },
+      "香港特别行政区": {
+        "city": "香港",
+        "temp_max": 32,
+        "temp_min": 27,
+        "precip": 2.0
+      }
+    }
   }
- }
 }
