@@ -58,10 +58,10 @@ class WeatherWebAdapter(WeatherProvider):
             '西宁': {'url': 'https://www.weather.com.cn/weather/101150101.shtml', 'lat': 36.6171, 'lon': 101.7782, 'province_code': '630000', 'region': '西北', 'province_name': '青海省'},
             '银川': {'url': 'https://www.weather.com.cn/weather/101170101.shtml', 'lat': 38.4872, 'lon': 106.2309, 'province_code': '640000', 'region': '西北', 'province_name': '宁夏回族自治区'},
             '乌鲁木齐': {'url': 'https://www.weather.com.cn/weather/101130101.shtml', 'lat': 43.8256, 'lon': 87.6168, 'province_code': '650000', 'region': '西北', 'province_name': '新疆维吾尔自治区'},
-            # 港澳台地区（暂不爬取天气数据，仅保留基本信息）
-            '台北': {'url': None, 'lat': 25.0330, 'lon': 121.5654, 'province_code': '710000', 'region': '港澳台', 'province_name': '台湾省'},
-            '香港': {'url': None, 'lat': 22.3193, 'lon': 114.1694, 'province_code': '810000', 'region': '港澳台', 'province_name': '香港特别行政区'},
-            '澳门': {'url': None, 'lat': 22.1987, 'lon': 113.5439, 'province_code': '820000', 'region': '港澳台', 'province_name': '澳门特别行政区'},
+            # 港澳台地区（使用独立数据源）
+            '台北': {'url': 'https://www.weather.com.cn/weather/101340101.shtml', 'lat': 25.0330, 'lon': 121.5654, 'province_code': '710000', 'region': '港澳台', 'province_name': '台湾省'},
+            '香港': {'url': 'http://www.weather.com.cn/weathern/101320101.shtml', 'lat': 22.3193, 'lon': 114.1694, 'province_code': '810000', 'region': '港澳台', 'province_name': '香港特别行政区'},
+            '澳门': {'url': 'https://www.weather.com.cn/weather/101330101.shtml', 'lat': 22.1987, 'lon': 113.5439, 'province_code': '820000', 'region': '港澳台', 'province_name': '澳门特别行政区'},
         }
         
         # 保留旧接口兼容
@@ -116,24 +116,6 @@ class WeatherWebAdapter(WeatherProvider):
             except Exception as e:
                 print(f"    [FAIL] 获取失败: {str(e)[:30]}")
                 continue
-        
-        # 添加港澳台地区的基本信息（无天气数据）
-        for city_name, info in self.province_data.items():
-            if info['url'] is None:  # 港澳台地区
-                all_data.append({
-                    'province_name': info['province_name'],
-                    'province_code': info['province_code'],
-                    'region': info['region'],
-                    'city_name': city_name,
-                    'date': date,
-                    'temperature_max': None,
-                    'temperature_min': None,
-                    'precipitation_sum': None,
-                    'latitude': info['lat'],
-                    'longitude': info['lon'],
-                    'source': 'web',
-                    'fetch_time': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                })
         
         if all_data:
             df = pd.DataFrame(all_data)
@@ -266,12 +248,26 @@ class WeatherWebAdapter(WeatherProvider):
                 days_1_7 = self._parse_7day_all(soup7, resp7.text, city_name, info)
                 
                 # === 2. 获取8-15天预报 ===
-                url15 = url.replace('/weather/', '/weather15d/')
-                resp15 = requests.get(url15, headers=headers, timeout=30)
-                resp15.raise_for_status()
-                resp15.encoding = 'utf-8'
-                soup15 = BeautifulSoup(resp15.text, 'lxml')
-                days_8_15 = self._parse_15day_all(soup15, resp15.text, city_name, info)
+                # 港澳台地区特殊处理
+                if city_name == '香港':
+                    # 香港使用 weathern 页面，直接解析该页面获取15天数据
+                    days_8_15 = self._parse_hk_15day(soup7, resp7.text, city_name, info)
+                elif city_name in ['台北', '澳门']:
+                    # 台北和澳门使用标准 weather15d 页面
+                    url15 = url.replace('/weather/', '/weather15d/')
+                    resp15 = requests.get(url15, headers=headers, timeout=30)
+                    resp15.raise_for_status()
+                    resp15.encoding = 'utf-8'
+                    soup15 = BeautifulSoup(resp15.text, 'lxml')
+                    days_8_15 = self._parse_15day_all(soup15, resp15.text, city_name, info)
+                else:
+                    # 其他省份使用标准 weather15d 页面
+                    url15 = url.replace('/weather/', '/weather15d/')
+                    resp15 = requests.get(url15, headers=headers, timeout=30)
+                    resp15.raise_for_status()
+                    resp15.encoding = 'utf-8'
+                    soup15 = BeautifulSoup(resp15.text, 'lxml')
+                    days_8_15 = self._parse_15day_all(soup15, resp15.text, city_name, info)
                 
                 combined = days_1_7 + days_8_15
                 all_records.extend(combined)
@@ -400,6 +396,58 @@ class WeatherWebAdapter(WeatherProvider):
             else:
                 target = target.replace(month=today.month + 1)
         return target.strftime('%Y-%m-%d')
+    
+    def _parse_hk_15day(self, soup, html, city_name, info):
+        """解析香港15天预报页面（weathern页面）"""
+        records = []
+        
+        # 香港的 weathern 页面包含完整的15天预报数据
+        # 尝试从页面中提取第8-15天的数据
+        
+        # 查找天气列表
+        items = soup.select('ul.t.clearfix li, ul[class*="t"] li, .t15 li')
+        if not items:
+            items = soup.find_all('li', class_=lambda c: c and 'sky' in c)
+        
+        for li in items:
+            try:
+                h1 = li.find('h1')
+                if not h1:
+                    continue
+                h1_text = h1.get_text(strip=True)
+                date_match = re.search(r'(\d+)日', h1_text)
+                if not date_match:
+                    continue
+                day_num = int(date_match.group(1))
+                
+                # 只处理第8-15天
+                if day_num < 8:
+                    continue
+                
+                # 天气现象
+                wea_el = li.find(class_='wea')
+                weather = wea_el.get_text(strip=True) if wea_el else '未知'
+                
+                # 温度
+                temp_el = li.find(class_='tem')
+                temp_max, temp_min = None, None
+                if temp_el:
+                    spans = temp_el.find_all('span')
+                    ies = temp_el.find_all('i')
+                    if spans:
+                        temp_max = int(re.search(r'(\d+)', spans[0].get_text()).group(1))
+                    if ies:
+                        temp_min = int(re.search(r'(\d+)', ies[0].get_text()).group(1))
+                
+                if temp_max and temp_min:
+                    day_date = self._build_date_str(day_num)
+                    precip = self._estimate_precip(weather)
+                    records.append(self._make_record(city_name, info, day_date, temp_max, temp_min, precip))
+                    
+            except Exception as e:
+                continue
+        
+        return records
     
     def _estimate_precip(self, weather):
         """根据天气现象估算降水量"""
