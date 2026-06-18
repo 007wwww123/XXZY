@@ -229,4 +229,3 @@ class OpenMeteoAdapter(WeatherProvider):
             return "数据解析失败，服务器返回了无效的数据格式，请稍后重试。"
         else:
             return "获取天气数据失败，请稍后重试。"
-
