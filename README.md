@@ -444,8 +444,7 @@ export PYTHONPATH=src       # Linux / macOS
 ### 待实现
 
 - ⬜ pyecharts HTML 地图导出
-- ⬜ 多城市加权聚合（替代省会单点代表）
-- ⬜ 更多指标：风速、湿度、空气质量等
+
 
 ---
 
