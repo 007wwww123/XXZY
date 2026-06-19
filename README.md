@@ -87,7 +87,7 @@ python -m http.server 8080
 | **多数据源** | Open-Meteo API（api）、中国天气网当日爬取（web）、15 天预报（web15d） |
 | **批量抓取** | 按 `provinces.csv` 并发抓取全国省级数据，含重试与限速 |
 | **省名对齐** | `map_join` 模块将数据省名与 GeoJSON 命名体系统一 |
-| **规划能力** | Parquet 存储、pyecharts 分层设色 HTML 导出（transform / export / choropleth / cli 待完善） |
+| **规划能力** | Parquet 数据存储（已实现）；pyecharts HTML 导出（待实现） |
 
 ---
 
@@ -186,7 +186,26 @@ python -m http.server 8080
 # 浏览器访问：http://localhost:8080/forecast.html
 ```
 
-### 方式三：Python 数据抓取
+### 方式三：Parquet 数据存储（CLI）
+
+```bash
+cd weather-map
+set PYTHONPATH=src          # Windows CMD
+# $env:PYTHONPATH="src"     # Windows PowerShell
+
+# Open-Meteo API 抓取并存储
+python -m weather_map.cli --source api --date 2026-06-10
+
+# 中国天气网爬取并存储
+python -m weather_map.cli --source web --date 2026-06-10
+```
+
+输出文件：
+
+- `data/parquet/raw/weather_YYYY-MM-DD_raw.parquet` — 清洗后的原始记录
+- `data/parquet/processed/weather_YYYY-MM-DD_processed.parquet` — 省级聚合并对齐省名后的数据
+
+### 方式四：Python 数据抓取（API 调用）
 
 在 `weather-map` 目录下，将 `src` 加入 Python 路径后调用：
 
@@ -206,7 +225,7 @@ df = fetch_weather_data(source="web")
 df = fetch_weather_data(source="web15d")
 ```
 
-### 方式四：运行测试
+### 方式五：运行测试
 
 ```bash
 cd weather-map
@@ -261,10 +280,10 @@ XXZY/
 | 数据抓取 | `services/fetch.py` | ✅ | 统一入口、全国批量并发抓取 |
 | 省名对齐 | `services/map_join.py` | ✅ | 省名映射、GeoJSON 属性关联 |
 | 地理缓存 | `utils/geo_cache.py` | ✅ | GeoJSON / CSV / JSON 缓存加载 |
-| 数据转换 | `services/transform.py` | 🚧 | 清洗、聚合（待实现） |
-| 数据导出 | `services/export.py` | 🚧 | Parquet 导出（待实现） |
+| 数据转换 | `services/transform.py` | ✅ | 清洗、字段归一化、省级聚合 |
+| 数据导出 | `services/export.py` | ✅ | Parquet 读写（raw / processed） |
 | 地图可视化 | `viz/choropleth.py` | 🚧 | pyecharts HTML 导出（待实现） |
-| 命令行 | `cli.py` | 🚧 | CLI 流水线编排（待实现） |
+| 命令行 | `cli.py` | ✅ | 抓取 → 清洗 → Parquet 存储 |
 
 > **图例**：✅ 已完成 | 🚧 待实现
 
@@ -373,11 +392,19 @@ python -m http.server 8080
 
 ---
 
-### Q4：python -m weather_map.cli 无响应？
+### Q4：python -m weather_map.cli 报错或无输出？
 
-**原因**：`cli.py` 目前为空实现，CLI 流水线尚未完成。
+**原因**：未设置 `PYTHONPATH`，或网络/API 请求失败导致未抓取到数据。
 
-**解决**：直接使用 `fetch_weather_data()` / `fetch_all_provinces()` Python API，或等待 CLI 模块完善。
+**解决**：
+
+```bash
+cd weather-map
+set PYTHONPATH=src
+python -m weather_map.cli --source api --date 2026-06-10
+```
+
+若仍失败，可改用 Python API：`fetch_all_provinces()` / `fetch_weather_data()`。
 
 ---
 
@@ -411,13 +438,13 @@ export PYTHONPATH=src       # Linux / macOS
 - ✅ 15 天动态预报可视化
 - ✅ Open-Meteo / 中国天气网数据适配器
 - ✅ 全国批量抓取与省名对齐
+- ✅ Parquet 数据存储（raw / processed）
+- ✅ CLI 抓取与存储流水线
 
 ### 待实现
 
-- ⬜ CLI 一键流水线
-- ⬜ Parquet 存储与 pyecharts HTML 导出
-- ⬜ 多城市加权聚合（替代省会单点代表）
-- ⬜ 更多指标：风速、湿度、空气质量等
+- ⬜ pyecharts HTML 地图导出
+
 
 ---
 
