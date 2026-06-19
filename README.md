@@ -87,7 +87,7 @@ python -m http.server 8080
 | **多数据源** | Open-Meteo API（api）、中国天气网当日爬取（web）、15 天预报（web15d） |
 | **批量抓取** | 按 `provinces.csv` 并发抓取全国省级数据，含重试与限速 |
 | **省名对齐** | `map_join` 模块将数据省名与 GeoJSON 命名体系统一 |
-| **规划能力** | Parquet 数据存储（已实现）；pyecharts HTML 导出（待实现） |
+| **规划能力** | Parquet 数据存储（已实现）；pyecharts HTML 导出（已实现） |
 
 ---
 
@@ -205,7 +205,28 @@ python -m weather_map.cli --source web --date 2026-06-10
 - `data/parquet/raw/weather_YYYY-MM-DD_raw.parquet` — 清洗后的原始记录
 - `data/parquet/processed/weather_YYYY-MM-DD_processed.parquet` — 省级聚合并对齐省名后的数据
 
-### 方式四：Python 数据抓取（API 调用）
+### 方式四：pyecharts HTML 地图导出
+
+在 `weather-map` 目录下，将 `src` 加入 Python 路径后，可基于 processed DataFrame 生成独立 HTML 地图：
+
+```python
+from weather_map.services.export import read_processed_parquet
+from weather_map.viz.choropleth import create_choropleth_map
+
+df = read_processed_parquet("2026-06-10")
+html_path = create_choropleth_map(df, metric="temperature")
+print(html_path)
+```
+
+默认输出到：
+
+```
+weather-map/outputs/html/weather_YYYY-MM-DD_temperature.html
+```
+
+`metric` 可使用 `temperature`、`precipitation` 或 processed 数据中已有的其他数值字段。
+
+### 方式五：Python 数据抓取（API 调用）
 
 在 `weather-map` 目录下，将 `src` 加入 Python 路径后调用：
 
@@ -225,7 +246,7 @@ df = fetch_weather_data(source="web")
 df = fetch_weather_data(source="web15d")
 ```
 
-### 方式五：运行测试
+### 方式六：运行测试
 
 ```bash
 cd weather-map
@@ -282,12 +303,12 @@ XXZY/
 | 地理缓存 | `utils/geo_cache.py` | ✅ | GeoJSON / CSV / JSON 缓存加载 |
 | 数据转换 | `services/transform.py` | ✅ | 清洗、字段归一化、省级聚合 |
 | 数据导出 | `services/export.py` | ✅ | Parquet 读写（raw / processed） |
-| 地图可视化 | `viz/choropleth.py` | 🚧 | pyecharts HTML 导出（待实现） |
+| 地图可视化 | `viz/choropleth.py` | ✅ | pyecharts HTML 导出 |
 | 命令行 | `cli.py` | ✅ | 抓取 → 清洗 → Parquet 存储 |
 
-> **图例**：✅ 已完成 | 🚧 待实现
+> **图例**：✅ 已完成
 
-### 数据流程（规划中的完整管道）
+### 数据流程（后端完整管道）
 
 ```
 provinces.csv 
@@ -440,10 +461,7 @@ export PYTHONPATH=src       # Linux / macOS
 - ✅ 全国批量抓取与省名对齐
 - ✅ Parquet 数据存储（raw / processed）
 - ✅ CLI 抓取与存储流水线
-
-### 待实现
-
-- ⬜ pyecharts HTML 地图导出
+- ✅ pyecharts HTML 地图导出
 
 
 ---
